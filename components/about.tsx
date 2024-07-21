@@ -1,0 +1,55 @@
+import React from "react";
+import Image from "next/image";
+import ab from "@/public/images/Property 1=Rectangle 1.png";
+
+function About() {
+  return (
+    <div className="bg-white/70  shadow-black/[0.03]  ">
+
+    <div className="relative flex flex-col-reverse  lg:flex-row items-center mt-16 mx-auto max-w-[90%] ">
+      <div className="lg:w-1/2 lg:order-last   lg:ml-6">
+        <Image
+          src={ab}
+          layout="responsive"
+          width={400}
+          height={300}
+          className="object-contain rounded-md"
+          alt=""
+        />
+        {/* <button className="bg-[#030442] mt-4 rounded-md p-2 text-white hidden sm:block ">more about us</button> */}
+      </div>
+
+      <div className="lg:w-1/2 lg:order-first lg:mr-6">
+        <div className="text-center lg:text-left">
+          <div className="flex text-center">
+            
+            <h2 className="text-[#030442] font-bold text-center text-xl pb-3">
+            {" "}
+            About us
+          </h2>
+         
+          </div>
+         
+          <h2 className="text-[#030442] text-lg  font-bold">
+            Welcome to Oluwole Oloruntobi Care Foundation
+          </h2>
+        </div>
+        <div className=" mb-4">
+          <p className="text-black ">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod,
+            delectus ratione nihil deserunt nisi unde magni tempore adipisci
+            mollitia saepe. Est, exercitationem dolor fugiat iure sint hic
+            doloremque reprehenderit perferendis!
+          </p>
+        </div>
+        <button className="bg-[#030442] rounded-md p-2 mt-4 text-white shadow-lg  mb-3 ">
+          More About Us
+        </button>
+      </div>
+    </div>
+    </div>
+
+  );
+}
+
+export default About;
