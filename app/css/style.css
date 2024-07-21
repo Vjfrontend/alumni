@@ -1,5 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
 
 /* Additional styles */
 @import 'additional-styles/utility-patterns.css';

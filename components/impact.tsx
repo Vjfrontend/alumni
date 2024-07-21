@@ -70,7 +70,7 @@ function Impact() {
 //   </div>
 // );
 return (
-  <div className="relative mt-8 bg-[#030442] shadow-lg">
+  <div id="impact" className="relative mt-8 bg-[#030442] shadow-lg">
     <div className="flex justify-center">
       <h2 className="text-white font-bold text-center text-xl pt-8 mb-7">
         Our Impact In Numbers
@@ -79,7 +79,7 @@ return (
     <div className="flex  flex-col lg:flex-row justify-center">
       <div className="items-center mx-4 flex-col  flex lg:flex-row  mb-6 lg:mb-0">
         <div className="text-center">
-          <h1 className="text-white text-xl">19577</h1>
+          <h1 className="text-white text-xl">577</h1>
           <h1 className="text-white">Children Impacted</h1>
         </div>
         <div className="mb-1 flex justify-center">
@@ -96,7 +96,7 @@ return (
       </div>
       <div className="items-center mx-4 flex-col  flex lg:flex-row  mb-6 lg:mb-0">
         <div className="text-center">
-          <h1 className="text-white text-xl">10</h1>
+          <h1 className="text-white text-xl">40</h1>
           <h1 className="text-white">Educational Campaign</h1>
         </div>
         <div className="mb-1 flex justify-center">
@@ -113,7 +113,7 @@ return (
       </div>
       <div className="items-center mx-4 flex-col  flex lg:flex-row  mb-6 lg:mb-0">
         <div className="text-center">
-          <h1 className="text-white text-xl">10</h1>
+          <h1 className="text-white text-xl">100</h1>
           <h1 className="text-white">Health Campaign</h1>
         </div>
         <div className="mb-1 flex justify-center">
@@ -130,7 +130,7 @@ return (
       </div>
       <div className="items-center mx-4 flex-col  flex lg:flex-row  mb-6 lg:mb-0">
         <div className="text-center">
-          <h1 className="text-white text-xl">10</h1>
+          <h1 className="text-white text-xl">20</h1>
           <h1 className="text-white">Advocacy walk</h1>
         </div>
       </div>

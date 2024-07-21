@@ -134,7 +134,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent  hover:border-b-white hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  mx-4 lg:mx-5"
-                  href="#"
+                  href="/"
                 >
                   Home
                 </Link>
@@ -142,7 +142,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent rounded-md hover:border-b-white  px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="#about"
                 >
                   About
                 </Link>
@@ -151,7 +151,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="#impact"
                 >
                   Impact
                 </Link>
@@ -159,7 +159,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="/outreach"
                 >
                   Outreach
                 </Link>
@@ -168,23 +168,23 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="#testimonials"
                 >
                   Testimonials
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="#"
                 >
                   Media
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="#contact"
                 >
                   Contact
                 </Link>

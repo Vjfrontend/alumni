@@ -2,7 +2,7 @@ import React from "react";
 
 function Focus() {
     return (
-        <div className="relative mt-6 bg-white/70  shadow-black/[0.03]">
+        <div className="relative mt-6 bg-gray-100 shadow-black/[0.03]">
           <div className="flex justify-center">
             <h2 className="text-[#030442] font-bold text-center text-xl mb-7">
               Our Focus Area

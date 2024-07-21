@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],
         'cabinet-grotesk': ['var(--font-cabinet-grotesk)', 'sans-serif'],   
+        gamaamli:["Ga Maamli"]
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],
