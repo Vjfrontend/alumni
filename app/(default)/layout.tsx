@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Analytics } from "@vercel/analytics/react"
 
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
@@ -30,6 +31,7 @@ export default function DefaultLayout({
       <main className="grow">
 
         {children}
+        <Analytics />
 
       </main>
 

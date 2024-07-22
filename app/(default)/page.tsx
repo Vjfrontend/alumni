@@ -2,6 +2,7 @@ export const metadata = {
   title: 'OOCF',
   description: 'Page description',
 }
+import { Analytics } from "@vercel/analytics/react"
 
 import Hero from '@/components/hero'
 import About from '@/components/about'
