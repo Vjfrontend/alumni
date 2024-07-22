@@ -97,7 +97,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Home
@@ -106,7 +106,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="#about"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
                 About
@@ -115,7 +115,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="#impact"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Impact
@@ -124,7 +124,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/outreach"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Outreach
@@ -133,7 +133,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="#testimonials"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Testimonial
@@ -142,7 +142,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="#contact"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Contact{" "}
