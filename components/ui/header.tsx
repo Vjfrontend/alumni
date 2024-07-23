@@ -97,10 +97,13 @@ import oocf from "@/public/images/oocf.jpg";
 import Image from "next/image";
 
 import MobileMenu from "./mobile-menu";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
-
+  // const pathname = usePathname();
+  // // const pathname = router.pathname
+  // console.log(pathname);
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
     window.pageYOffset > 10 ? setTop(false) : setTop(true);
@@ -142,7 +145,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent rounded-md hover:border-b-white  px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#about"
+                  href="/#about"
                 >
                   About
                 </Link>
@@ -151,7 +154,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#impact"
+                  href="/#impact"
                 >
                   Impact
                 </Link>
@@ -168,7 +171,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#testimonials"
+                  href="/#testimonials"
                 >
                   Testimonials
                 </Link>
@@ -184,7 +187,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#contact"
+                  href='/#contact'
                 >
                   Contact
                 </Link>
