@@ -1,6 +1,47 @@
-// components/ContactForm.js
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import {collection, addDoc} from 'firebase/firestore'
+import {database} from './firebase'
+
 const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [phone, setPhone] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Validation check
+    if (!name || !email || !message || !phone) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+    try {
+      const ReviewColl = collection(database, 'Reviews');
+      await addDoc(ReviewColl, {
+        name,
+        email,
+        message,
+        phone,
+
+      });
+      // Optionally, clear the form fields or provide user feedback here
+      setName('');
+      setEmail('');
+      setMessage('');
+      setPhone('');
+
+      alert('Review submitted successfully!');
+    } catch (error) {
+      console.error('Error adding document: ', error.message);
+      alert('Error submitting review. Please try again.');
+    }
+  };
+          //const Reviews = addDoc(ReviewColl)
+
+  
   return (
     <div id="contact" className="min-h-screen flex items-center justify-center bg-[#030442] text-white p-4">
       <div className="w-full max-w-6xl">
@@ -10,7 +51,7 @@ const ContactForm = () => {
         </div>
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <form className=" text-white p-8 rounded-lg shadow-lg">
+            <form className=" text-white p-8 rounded-lg shadow-lg" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   className="block text-sm font-bold mb-2"
@@ -22,6 +63,8 @@ const ContactForm = () => {
                   className="w-full px-3 py-2 bg-transparent border rounded"
                   type="text"
                   id="fullName"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Your Full Name"
                 />
               </div>
@@ -33,6 +76,8 @@ const ContactForm = () => {
                   className="w-full px-3 py-2 bg-transparent border rounded"
                   type="email"
                   id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your Email"
                 />
               </div>
@@ -44,6 +89,8 @@ const ContactForm = () => {
                   className="w-full px-3 py-2 border bg-transparent rounded"
                   type="text"
                   id="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="Your Phone Number"
                 />
               </div>
@@ -58,10 +105,12 @@ const ContactForm = () => {
                   className="w-full px-3 py-2 border bg-transparent rounded h-32"
                   id="message"
                   placeholder="Your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <div className="text-end">
-                <button className="bg-white text-[#030442] text-center px-4 py-1 rounded hover:bg-gray-100">
+                <button className="bg-white text-[#030442] text-center px-4 py-1 rounded hover:bg-gray-100" >
                   Send Message
                 </button>
               </div>
