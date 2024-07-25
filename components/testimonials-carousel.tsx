@@ -2,50 +2,45 @@ import Testimonial from "@/components/testimonial";
 export default function TestimonialsCarousel() {
   const testimonials = [
     {
-      
-      name: "Peter Lowe",
-      
-      date: "May 19, 2027",
+      name: "Felicia T",
+
+      date: "May 19, 2023",
       content:
-        "As a founder, having a visually appealing and user-friendly website is essential. This tool not only helped me achieve that but also improved my site's performance and SEO.",
-      
+        "I've known the Chairman of OOCF for over a decade, and his commitment to helping the less privileged has been inspiring. His vision, which predates the foundation, has positively impacted many lives and exemplifies true generosity.",
     },
     {
-      
       name: "Rodri Alba",
-      
-      date: "Apr 12, 2027",
+
+      date: "Apr 12, 2023",
       content:
-        "Simple has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
-     
+        "Having known the Chairman for over a decade, I've witnessed his passion for uplifting the less privileged. His work, even before the foundation, has been a beacon of warmth and selflessness in our world.",
     },
     {
-      
-      name: "Michele Lex",
-      
-      date: "Mar 04, 2027",
+      name: "Oduwole Ademola",
+
+      date: "Mar 04, 2023",
       content:
-        "I've tried several website builders before, but none were as user-friendly and versatile as this one. From design to functionality, it exceeded my expectations!",
-     
+        "The Chairman's support is a warm embrace in challenging times. His dedication to humanity is inspiring. He's a living example of selfless service and compassion!.",
     },
     {
-      
       name: "Michael Ross",
-     
-      date: "Jan 15, 2027",
+
+      date: "Jan 15, 2023",
       content:
-        "Simple lives up to its name in every way. It's incredibly easy to use yet powerful enough to handle all my tasks effortlessly. It's become an essential part of my daily routine.",
-      
+        "Long before the foundation, the Chairman was already a beacon of hope. His vision for a better society has been the driving force behind the OOCF's impactful work.",
     },
   ];
 
   return (
-    <section id="testimonials" className="relative before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:h-[120%] before:bg-gradient-to-b before:from-gray-100">
+    <section
+      id="testimonials"
+      className="relative before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:h-[120%] before:bg-gradient-to-b before:from-gray-100"
+    >
       <div className="pt-12 md:pt-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">
-            Testimonials & Mentions
+            <h2 className="text-xl font-bold md:text-xl">
+              Testimonials & Mentions
             </h2>
           </div>
         </div>

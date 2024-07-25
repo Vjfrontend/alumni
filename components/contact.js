@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import {collection, addDoc} from 'firebase/firestore'
 import {database} from './firebase'
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -15,6 +16,7 @@ const ContactForm = () => {
     e.preventDefault();
     // Validation check
     if (!name || !email || !message || !phone) {
+      toast.error("fill out all fields")
       alert('Please fill in all fields before submitting.');
       return;
     }
@@ -34,12 +36,13 @@ const ContactForm = () => {
       setPhone('');
 
       alert('Review submitted successfully!');
+      
     } catch (error) {
       console.error('Error adding document: ', error.message);
       alert('Error submitting review. Please try again.');
     }
   };
-          //const Reviews = addDoc(ReviewColl)
+          // const Reviews = addDoc(ReviewColl)
 
   
   return (
@@ -155,9 +158,15 @@ const ContactForm = () => {
                 </svg>
               </div>
               <div className="ml-14">
-                <h3 className="text-lg">SEND US AN EMAIL</h3>
-                <p>bluehousetechnologies@gmail.com</p>
-              </div>
+  <h3 className="text-lg">SEND US AN EMAIL</h3>
+  <a 
+    href="mailto:Oluwoleoloruntobicarefoundation@gmail.com" 
+    className="mt-2 "
+  >
+    Oluwoleoloruntobicarefoundation@gmail.com
+  </a>
+</div>
+
               <div className="mt-10 absolute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

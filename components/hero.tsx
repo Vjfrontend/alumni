@@ -232,7 +232,7 @@ import Image from "next/image";
 import Link from "next/link";
 import carousel04 from "../public/images/annie-spratt-cVEOh_JJmEE-unsplash.jpg";
 import carousel05 from "../public/images/bill-wegener-8ldqRkOk5oo-unsplash.jpg";
-import carousel07 from "../public/images/Property 1=Rectangle 1.png";
+import carousel07 from "../public/images/annie-spratt-cVEOh_JJmEE-unsplash.jpg";
 
 const slides = [
   {

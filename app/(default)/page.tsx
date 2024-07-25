@@ -10,7 +10,7 @@ import Focus from '@/components/focus'
 import Impact from '@/components/impact'
 import Testimonail from '@/components/testimonials-carousel'
 import Contact from '@/components/contact'
-
+import Sponsors from "@/components/sponsors"
 export default function Home() {
   return (
     <>
@@ -19,6 +19,7 @@ export default function Home() {
       <Focus/>
       <Impact/>
       <Testimonail/>
+      <Sponsors />
       <Contact/>
            
       

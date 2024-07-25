@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ab from "@/public/images/Property 1=Rectangle 1.png";
+import ab from "@/public/images/about(1)(1).png";
 import Link from "next/link";
 
 function About() {
@@ -12,10 +12,10 @@ function About() {
       <div className="lg:w-1/2 lg:order-last   lg:ml-6">
         <Image
           src={ab}
-          layout="responsive"
-          width={400}
-          height={300}
-          className="object-contain rounded-md"
+          layout="fit"
+          width={700}
+          height={200}
+          className="object-contain rounded-lg shadow-lg "
           alt=""
         />
         {/* <button className="bg-[#030442] mt-4 rounded-md p-2 text-white hidden sm:block ">more about us</button> */}

@@ -162,7 +162,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="/outreach"
+                  href="#"
                 >
                   Outreach
                 </Link>

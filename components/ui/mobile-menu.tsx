@@ -123,7 +123,7 @@ export default function MobileMenu() {
             </li>
             <li>
               <Link
-                href="/outreach"
+                href="#"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
                 onClick={() => setMobileNavOpen(false)}
               >
