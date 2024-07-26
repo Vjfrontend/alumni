@@ -1,5 +1,5 @@
 import Link from "next/link";
-import oocf from "@/public/images/oocf.jpg";
+import oocf from "@/public/images/newlogo.png";
 import Image from "next/image";
 
 export default function Footer() {
