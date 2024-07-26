@@ -210,14 +210,14 @@ function MoreAbout() {
           <h2 className="text-[#030442]">Chairman</h2>
           <h2 className="">
             <span className="text-[#030442]">Fabiyi Oloruntobi Victor</span> is
-            a graduate of Medical Physiology from the University of Ilorin,
-            Nigeria. He holds a Master’s in Business Administration (MBA) from
-            Ahmadu Bello University, Zaria, Nigeria, and a Certificate in
-            Leadership and Management in Health (Cert.LMH) awarded by the
-            University of Washington. With over a decade of experience in
-            pharmaceutical sales, he currently serves as the Regional Sales
-            Manager at Fidson Healthcare plc, one of Nigeria's leading
-            pharmaceutical companies.
+            a graduate of medical physiology from the University of ilorin
+            Nigeria and he had his masters in business administration (MBA) from
+            Ahamdu Bello University, Zaria, Nigeria, aslo, certificate in
+            leadership and management in health, (Cert.LMH) awarded by
+            University of Washington His been into pharmaceutical sales now over
+            a decade and currently Regional Sales Manager in one of the leading
+            pharmaceutical company in Nigeria (Fidson Healthcare plc). He's
+            passionate about the welfare of children and a sane society
           </h2>
         </div>
       </div>
@@ -281,10 +281,10 @@ function MoreAbout() {
           <h2 className="text-[#030442]">Project Manager</h2>
           <h2>
             <span className="text-[#030442]"> Oluwasegun </span>
-            holds a Bachelor degree in Pharmacy from University of Ibadan in
-            2011. He also hold An MBA from Obafemi Awolowo University ile Ife
-            where he majors in Marketing. Oluwasegun is a seasoned sales man
-            having worked with top pharmaceutical company both indigenous and
+            holds a Bachelor degree in Pharmacy from University of Ibadan. He
+            also hold An MBA from Obafemi Awolowo University ile Ife where he
+            majors in Marketing. Oluwasegun is a seasoned sales man having
+            worked with top pharmaceutical company both indigenous and
             multinational. He has work at Biofem Pharmaceuticals ltd, also as
             Specialist Products adviser with Novo Nordisk, He retired as A top
             performer Field sales representative at Merck to start his own

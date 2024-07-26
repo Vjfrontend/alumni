@@ -2,7 +2,7 @@ import Testimonial from "@/components/testimonial";
 export default function TestimonialsCarousel() {
   const testimonials = [
     {
-      name: "Felicia T",
+      name: "Felicia Taiwo",
 
       date: "May 19, 2023",
       content:

@@ -4,7 +4,7 @@ function Sponsors() {
   const sponsors = [
     { id: 1, logo: '/images/logo 1.png' },
     { id: 2, logo: '/images/logo 2.png' },
-    { id: 3, logo: '/images/logo 3.png' },
+    { id: 3, logo: '/images/Logo 3.png' },
   ];
 
   return (
