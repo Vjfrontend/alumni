@@ -4,28 +4,22 @@ export default function TestimonialsCarousel() {
     {
       name: "Felicia Taiwo",
 
-      date: "May 19, 2023",
+      date: "july 24, 2024",
       content:
         "I've known the Chairman of OOCF for over a decade, and his commitment to helping the less privileged has been inspiring. His vision, which predates the foundation, has positively impacted many lives and exemplifies true generosity.",
     },
-    {
-      name: "Rodri Alba",
-
-      date: "Apr 12, 2023",
-      content:
-        "Having known the Chairman for over a decade, I've witnessed his passion for uplifting the less privileged. His work, even before the foundation, has been a beacon of warmth and selflessness in our world.",
-    },
+   
     {
       name: "Oduwole Ademola",
 
-      date: "Mar 04, 2023",
+      date: "july 20, 2024",
       content:
         "The Chairman's support is a warm embrace in challenging times. His dedication to humanity is inspiring. He's a living example of selfless service and compassion!.",
     },
     {
       name: "Temitayo Ogunmuyiwa",
 
-      date: "Jan 15, 2023",
+      date: "july 26, 2024",
       content:
         "I am thrilled to endorse Oloruntobi, the Chairman of OOCF, whose unwavering passion and dedication to the welfare of underprivileged children is truly inspiring. His empathy, vision, and commitment will undoubtedly drive the success of this NGO and make a profound impact on countless lives.",
     },

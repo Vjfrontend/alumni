@@ -207,11 +207,11 @@ function MoreAbout() {
         />
 
         <div>
-          <h2 className="text-[#030442]">Chairman</h2>
+          <h2 className="text-[#030442]">CHAIRMAN</h2>
           <h2 className="">
             <span className="text-[#030442]">Fabiyi Oloruntobi Victor</span> is
             a graduate of medical physiology from the University of ilorin
-            Nigeria and he had his masters in business administration (MBA) from
+            Nigeria and he had his masters  degree in business administration (MBA) from
             Ahamdu Bello University, Zaria, Nigeria, aslo, certificate in
             leadership and management in health, (Cert.LMH) awarded by
             University of Washington His been into pharmaceutical sales now over
@@ -224,8 +224,8 @@ function MoreAbout() {
 
       <div className="flex items-center lg:flex-row flex-col-reverse space-x-4 w-full mt-8">
         <div className="flex-1 ">
-          <h2 className="text-[#030442]">Legal Advisor</h2>
-          <h2 className="">
+          <h2 className="text-[#030442] lg:ml-0 ml-3">LEGAL ADVISOR</h2>
+          <h2 className=" ml-3 lg:ml-0">
             <span className="text-[#030442]">
               {" "}
               Oluwadamilola Odunola Obadimeji{" "}
@@ -263,7 +263,7 @@ function MoreAbout() {
           alt=""
         />
         <div>
-          <h2 className="text-[#030442]">General Secretary</h2>
+          <h2 className="text-[#030442]">GENERAL SECRETARY</h2>
           <h2 className="">
             <span className="text-[#030442]"> Fabiyi Olasunmbo Dorcas </span>
             is a passionate education enthusiast dedicated to empowering youth
@@ -278,8 +278,8 @@ function MoreAbout() {
       </div>
       <div className="flex items-center lg:flex-row flex-col-reverse space-x-4 w-full mt-8">
         <div className="flex-1 ">
-          <h2 className="text-[#030442]">Project Manager</h2>
-          <h2>
+          <h2 className="text-[#030442] lg:ml-0 ml-3">PROJECT MANAGER</h2>
+          <h2 className="lg:ml-0 ml-3">
             <span className="text-[#030442]">  Adewumi Oluwasegun </span>
             holds a Bachelor degree in Pharmacy from University of Ibadan. He
             also hold An MBA from Obafemi Awolowo University ile Ife where he
@@ -313,7 +313,7 @@ function MoreAbout() {
           alt=""
         />
         <div>
-          <h2 className="text-[#030442]">Medical and Financial director</h2>
+          <h2 className="text-[#030442]">MEDICAL AND FINANCIAL DIRECTOR</h2>
           <h2 className="">
             <span className="text-[#030442]">
               {" "}
