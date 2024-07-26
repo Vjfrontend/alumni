@@ -286,11 +286,11 @@ const Hero = () => {
           <div className="absolute bottom-0 w-full h-6 bg-gradient-to-t from-white/70 to-transparent "></div>
         </div>
 
-        <div className="absolute top-1/2 transform -translate-y-1/2  flex-col sm:flex-row  lg:ml-12  ml-3 sm:items-start space-y-4 sm:space-y-0 text-white lg:mt-10  mt-7">
+        <div className="absolute top-1/2 transform -translate-y-1/2  flex-col sm:flex-row  lg:ml-12 font-gamaamli  ml-3 sm:items-start space-y-4 sm:space-y-0 text-white lg:mt-10  mt-7">
           <h2 className="text-xl lg:ml-8  ml-0 sm:text-4xl lg:text-6xl  font-bold mb-7 sm:text-left font-gamaamli">
             <span>Empowering Lives,</span>
             <br className="hidden lg:block" />
-            <span className=" ml-1"> Enriching <span className="text-[#030442]">Childhoods</span></span>
+             Enriching <span className="text-[#030442]">Childhoods</span>
           </h2>
           <div className=" sm:text-left   sm:mt-0">
             <p className="text-base sm:text-lg  lg:ml-7 ml-0 lg:text-xl mb-4 ">
