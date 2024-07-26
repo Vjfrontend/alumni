@@ -2,7 +2,7 @@ import React from 'react'
 
 function Sponsors() {
   const sponsors = [
-    { id: 1, logo: '/images/logo 1.png' },
+    { id: 1, logo: '/images/mylogo.png' },
     { id: 2, logo: '/images/logo 2.png' },
     { id: 3, logo: '/images/Logo 3.png' },
   ];

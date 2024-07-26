@@ -179,9 +179,9 @@ function MoreAbout() {
         <h2 className="font-serif text-lg   font-bold   text-[#030442]">
           Vision
         </h2>
-        <h2>
+        <h2 className="mb-4">
           To ensure that every child in our society has the opportunity to live
-          a fully fulfilled life.
+          a good life.
         </h2>
         <h2 className="font-serif text-lg   font-bold   text-[#030442]">
           Mission
@@ -207,14 +207,14 @@ function MoreAbout() {
         />
 
         <div>
-          <h2 className="text-[#030442]">CHAIRMAN</h2>
+          <h2 className="text-[#030442] mb-2">CHAIRMAN</h2>
           <h2 className="">
             <span className="text-[#030442]">Fabiyi Oloruntobi Victor</span> is
-            a graduate of medical physiology from the University of ilorin
+            a graduate of medical physiology from the University of Ilorin
             Nigeria and he had his masters  degree in business administration (MBA) from
             Ahamdu Bello University, Zaria, Nigeria, aslo, certificate in
             leadership and management in health, (Cert.LMH) awarded by
-            University of Washington His been into pharmaceutical sales now over
+            University of Washington He has been into pharmaceutical sales now over
             a decade and currently Regional Sales Manager in one of the leading
             pharmaceutical company in Nigeria (Fidson Healthcare plc). He's
             passionate about the welfare of children and a sane society
@@ -222,9 +222,9 @@ function MoreAbout() {
         </div>
       </div>
 
-      <div className="flex items-center lg:flex-row flex-col-reverse space-x-4 w-full mt-8">
+      <div className="flex items-center lg:flex-row flex-col-reverse space-x-4 w-full mt-12">
         <div className="flex-1 ">
-          <h2 className="text-[#030442] lg:ml-0 ml-3">LEGAL ADVISOR</h2>
+          <h2 className="text-[#030442] lg:ml-0 mb-2 ml-3">LEGAL ADVISOR</h2>
           <h2 className=" ml-3 lg:ml-0">
             <span className="text-[#030442]">
               {" "}
@@ -253,7 +253,7 @@ function MoreAbout() {
         </div>
       </div>
 
-      <div className="flex items-center lg:flex-row flex-col space-x-4 mt-8  w-full">
+      <div className="flex items-center lg:flex-row flex-col space-x-4 mt-12  w-full">
         <Image
           src={three}
           layout="intrinsic"
@@ -263,7 +263,7 @@ function MoreAbout() {
           alt=""
         />
         <div>
-          <h2 className="text-[#030442]">GENERAL SECRETARY</h2>
+          <h2 className="text-[#030442] mb-2">GENERAL SECRETARY</h2>
           <h2 className="">
             <span className="text-[#030442]"> Fabiyi Olasunmbo Dorcas </span>
             is a passionate education enthusiast dedicated to empowering youth
@@ -272,13 +272,13 @@ function MoreAbout() {
             in Education from the University of Ilorin. Additionally, she is
             certified by the Teachers Registration Council of Nigeria (TRCN). As
             a committed educator, she currently serves as a Subject Teacher at
-            Trillium Learning Centre in Ilorin.
+            Trillium Learning Centre ,Ilorin.
           </h2>
         </div>
       </div>
-      <div className="flex items-center lg:flex-row flex-col-reverse space-x-4 w-full mt-8">
+      <div className="flex items-center lg:flex-row flex-col-reverse space-x-4 w-full mt-12">
         <div className="flex-1 ">
-          <h2 className="text-[#030442] lg:ml-0 ml-3">PROJECT MANAGER</h2>
+          <h2 className="text-[#030442]  mb-2 lg:ml-0 ml-3">PROJECT MANAGER</h2>
           <h2 className="lg:ml-0 ml-3">
             <span className="text-[#030442]">  Adewumi Oluwasegun </span>
             holds a Bachelor degree in Pharmacy from University of Ibadan. He
@@ -303,7 +303,7 @@ function MoreAbout() {
           />
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col items-center space-x-4 mt-8  w-full">
+      <div className="flex lg:flex-row flex-col items-center space-x-4 mt-12 w-full">
         <Image
           src={five}
           layout="intrinsic"
@@ -313,7 +313,7 @@ function MoreAbout() {
           alt=""
         />
         <div>
-          <h2 className="text-[#030442]">MEDICAL AND FINANCIAL DIRECTOR</h2>
+          <h2 className="text-[#030442] mb-2">MEDICAL AND FINANCIAL DIRECTOR</h2>
           <h2 className="">
             <span className="text-[#030442]">
               {" "}

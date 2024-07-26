@@ -158,7 +158,7 @@ const ContactForm = () => {
                 </svg>
               </div>
               <div className="ml-14">
-  <h3 className="text-lg">SEND US AN EMAIL</h3>
+  <h3 className="text-lg flex">SEND US AN EMAIL</h3>
   <a 
     href="mailto:Oluwoleoloruntobicarefoundation@gmail.com" 
     className="mt-2 "

@@ -145,9 +145,9 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#030442] border-b-2 border-transparent rounded-md hover:border-b-white  px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="/#about"
+                  href="/more-about"
                 >
-                  About
+                  About us
                 </Link>
               </li>
 

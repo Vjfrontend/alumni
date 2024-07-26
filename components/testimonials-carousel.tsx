@@ -8,13 +8,21 @@ export default function TestimonialsCarousel() {
       content:
         "I've known the Chairman of OOCF for over a decade, and his commitment to helping the less privileged has been inspiring. His vision, which predates the foundation, has positively impacted many lives and exemplifies true generosity.",
     },
-   
+
     {
       name: "Oduwole Ademola",
 
       date: "july 20, 2024",
       content:
-        "The Chairman's support is a warm embrace in challenging times. His dedication to humanity is inspiring. He's a living example of selfless service and compassion!.",
+        // "The Chairman's support is a warm embrace in challenging times. His dedication to humanity is inspiring. He's a living example of selfless service and compassion!.",
+        "I have known the Chairman of OOCF for over a decade. His passion to help the less privileged led to the foundation's creation. Even before its establishment, he was making a significant impact, showing that generosity and compassion still exist."
+
+
+
+
+
+
+
     },
     {
       name: "Temitayo Ogunmuyiwa",
