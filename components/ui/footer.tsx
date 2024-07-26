@@ -26,20 +26,6 @@ export default function Footer() {
               </Link>
             </div>
             <form className="w-full max-w-sm">
-              <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-none">
-                <input
-                  type="email"
-                  className="form-input w-full mb-2 sm:mb-0 sm:mr-2"
-                  placeholder="Your email"
-                  aria-label="Your email"
-                />
-                <button
-                  className="btn-sm text-white bg-[#030442] hover:bg-white shadow-sm whitespace-nowrap"
-                  type="submit"
-                >
-                  Join Newsletter
-                </button>
-              </div>
               {/* Success message */}
               {/* <p class="font-medium text-emerald-600 text-center sm:text-left sm:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
             </form>
@@ -96,12 +82,12 @@ export default function Footer() {
             </ul>
             {/* Left links */}
             <div className="text-sm font-medium md:order-1 space-x-6 mb-2 md:mb-0">
-              <Link
+              {/* <Link
                 className="text-gray-500 decoration-[#030442] decoration-2 underline-offset-2 hover:underline"
                 href="more-about"
               >
                 About
-              </Link>
+              </Link> */}
               <a
                 className="text-gray-500 decoration-[#030442] decoration-2 underline-offset-2 hover:underline"
                 href="#0"
@@ -123,13 +109,6 @@ export default function Footer() {
             livelihood, and supporting the less privileged. We provide free
             education to promising indigent students and mentor young people to
             become responsible members of society.
-            <Link
-              className="font-medium text-[#030442] decoration-[#030442] underline-offset-2 hover:underline"
-              href="#contact"
-            >
-              contact us
-            </Link>
-            .
           </div>
         </div>
       </div>

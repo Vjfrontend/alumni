@@ -8,8 +8,8 @@ function Sponsors() {
   ];
 
   return (
-    <div className="container mx-auto p-6 bg-transparent">
-<h2 className='text-xl  font-bold text-center'> Our Sponsor And Partners</h2>
+    <div className="container mx-auto p-6 bg-transparent mb-10">
+<h2 className='text-xl  font-bold text-center mb-6'> Our Sponsor And Partners</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-2">
         {sponsors.map(sponsor => (
           <div key={sponsor.id} className=" p-2 bg-transparent rounded-lg  flex items-center justify-center">

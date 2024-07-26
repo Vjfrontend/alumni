@@ -49,7 +49,7 @@ const ContactForm = () => {
     <div id="contact" className="min-h-screen flex items-center justify-center bg-[#030442] text-white p-4">
       <div className="w-full max-w-6xl">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold">GET IN TOUCH</h2>
+          <h2 className="text-2xl mt-8 font-bold">GET IN TOUCH</h2>
           <h1 className="text-4xl font-bold mt-2">Hey! Let's Talk</h1>
         </div>
         <div className="flex flex-wrap -mx-4">

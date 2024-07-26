@@ -1,21 +1,21 @@
 import React from "react";
 import Image from "next/image";
-import ab from "@/public/images/about(1)(1).png";
+import ab from "@/public/images/newlogo.png";
 import Link from "next/link";
 
 function About() {
   return (
    
-    <div id="about" className="bg-gray-100  shadow-black/[0.03]  ">
+    <div id="about" className="bg-gray-100  shadow-black/[0.03]  mt-20 ">
 
     <div className="relative flex flex-col-reverse  lg:flex-row items-center mt-16 mx-auto max-w-[90%] ">
       <div className="lg:w-1/2 lg:order-last   lg:ml-6">
         <Image
           src={ab}
           layout="fit"
-          width={700}
-          height={200}
-          className="object-contain rounded-lg shadow-lg "
+          // width={700}
+          // height={200}
+          className="object-contain rounded-lg  h-80 shadow-lg "
           alt=""
         />
         {/* <button className="bg-[#030442] mt-4 rounded-md p-2 text-white hidden sm:block ">more about us</button> */}

@@ -23,11 +23,11 @@ export default function TestimonialsCarousel() {
         "The Chairman's support is a warm embrace in challenging times. His dedication to humanity is inspiring. He's a living example of selfless service and compassion!.",
     },
     {
-      name: "Michael Ross",
+      name: "Temitayo Ogunmuyiwa",
 
       date: "Jan 15, 2023",
       content:
-        "Long before the foundation, the Chairman was already a beacon of hope. His vision for a better society has been the driving force behind the OOCF's impactful work.",
+        "I am thrilled to endorse Oloruntobi, the Chairman of OOCF, whose unwavering passion and dedication to the welfare of underprivileged children is truly inspiring. His empathy, vision, and commitment will undoubtedly drive the success of this NGO and make a profound impact on countless lives.",
     },
   ];
 

@@ -70,9 +70,9 @@ function Impact() {
 //   </div>
 // );
 return (
-  <div id="impact" className="relative mt-8 bg-[#030442] shadow-lg">
+  <div id="impact" className="relative mt-14 bg-[#030442] shadow-lg pb-14">
     <div className="flex justify-center">
-      <h2 className="text-white font-bold text-center text-xl pt-8 mb-7">
+      <h2 className="text-white font-bold text-center text-xl pt-10 mb-7">
         Our Impact In Numbers
       </h2>
     </div>
