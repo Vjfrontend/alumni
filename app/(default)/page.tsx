@@ -1,8 +1,8 @@
 export const metadata = {
   title: 'OOCF',
-  description: 'Page description',
+  description: 'Join us in restoring hope to underserved and underprivileged children'
 }
-import { Analytics } from "@vercel/analytics/react"
+
 
 import Hero from '@/components/hero'
 import About from '@/components/about'
