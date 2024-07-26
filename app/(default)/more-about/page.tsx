@@ -280,7 +280,7 @@ function MoreAbout() {
         <div className="flex-1 ">
           <h2 className="text-[#030442]">Project Manager</h2>
           <h2>
-            <span className="text-[#030442]"> Oluwasegun </span>
+            <span className="text-[#030442]">  Adewumi Oluwasegun </span>
             holds a Bachelor degree in Pharmacy from University of Ibadan. He
             also hold An MBA from Obafemi Awolowo University ile Ife where he
             majors in Marketing. Oluwasegun is a seasoned sales man having
