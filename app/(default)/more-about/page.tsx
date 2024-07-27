@@ -214,7 +214,7 @@ function MoreAbout() {
             Nigeria and he had his masters degree in business administration
             (MBA) from Ahamdu Bello University, Zaria, Nigeria, aslo,
             certificate in leadership and management in health, (Cert.LMH)
-            awarded by University of Washington He has been into pharmaceutical
+            awarded by University of Washington. He has been into pharmaceutical
             sales now over a decade and currently Regional Sales Manager in one
             of the leading pharmaceutical company in Nigeria (Fidson Healthcare
             plc). He's passionate about the welfare of children
