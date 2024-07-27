@@ -7,7 +7,7 @@ function About() {
   return (
     <div id="about" className="bg-gray-100  shadow-black/[0.03]  mt-20 ">
       <div className="relative flex flex-col-reverse  lg:flex-row items-center mt-16 mx-auto max-w-[90%] ">
-        <div className="lg:w-1/2 lg:order-last   lg:ml-6">
+        <div className="lg:w-1/2 lg:order-last mt-8 lg:mt-0  lg:ml-6">
           <Image
             src={ab}
             layout="fit"
@@ -42,7 +42,7 @@ function About() {
             </p>
           </div>
 
-          <button className="bg-[#030442] rounded-md p-2 mt-4 text-white  hover:bg-white hover:text-[#030442] shadow-lg  mb-3 ">
+          <button className="bg-[#030442] rounded-md p-2 mt-4 text-white  hover:bg-white hover:text-[#030442] shadow-lg  mb-6 ">
             <Link href="/more-about"> More About Us</Link>
           </button>
         </div>
