@@ -14,7 +14,7 @@ import Sponsors from "@/components/sponsors"
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero/>
       <About/>
       <Focus/>
       <Impact/>

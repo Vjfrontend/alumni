@@ -286,8 +286,8 @@ const Hero = () => {
           <div className="absolute bottom-0 w-full h-6 bg-gradient-to-t from-white/70 to-transparent "></div>
         </div>
 
-        <div className="absolute top-1/2 transform -translate-y-1/2  flex-col sm:flex-row  lg:ml-12 font-gamaamli  ml-3 sm:items-start space-y-4 sm:space-y-0 text-white lg:mt-10  mt-7">
-          <h2 className="text-xl lg:ml-8  ml-0 sm:text-4xl lg:text-6xl  font-regular  font-bold mb-7 sm:text-left ">
+        <div className="absolute top-1/2 transform -translate-y-1/2  flex-col sm:flex-row  lg:ml-12   ml-3 sm:items-start space-y-4 sm:space-y-0 text-white lg:mt-10  mt-7">
+          <h2 className="text-xl lg:ml-8  ml-0 sm:text-4xl lg:text-6xl  font-regular   mb-7 sm:text-left ">
             <span>Empowering Lives,</span>
             <br className="hidden lg:block" />
              Enriching <span className="text-[#030442]">Childhoods</span>
