@@ -146,7 +146,7 @@ const ContactForm = () => {
                   </p>
                 </div>
               </div>
-              <div className="mt-10 absolute">
+              <div className="mt-16 absolute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -157,17 +157,17 @@ const ContactForm = () => {
                   <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
                 </svg>
               </div>
-              <div className="ml-14">
-  <h3 className="text-lg flex">SEND US AN EMAIL</h3>
+              <div className="ml-14  ">
+  <h3 className="text-lg ">SEND US AN EMAIL</h3>
   <a 
     href="mailto:Oluwoleoloruntobicarefoundation@gmail.com" 
-    className="mt-2 "
+    className="mt-2  "
   >
-    Oluwoleoloruntobicarefoundation@gmail.com
+    Oluwoleoloruntobicarefoundation<br className="lg:hidden  md:hidden"/>@gmail.com
   </a>
 </div>
 
-              <div className="mt-10 absolute">
+              <div className="mt-16 absolute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -184,9 +184,9 @@ const ContactForm = () => {
                 84,Ifelere phase 2,gaa akanbi ilorin.
                 </p>
               </div>
-              <div className="mt-4 ml-14 text-center">
+              <div className=" text-center mt-6">
                 <h3 className="text-lg text-center">FOLLOW US ON</h3>
-                <div className="flex space-x-4 mt-2 justify-center">
+                <div className="flex space-x-4 mt-4 mb-4 justify-center">
                   <Link href="#" className="text-2xl">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

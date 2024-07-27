@@ -211,13 +211,14 @@ function MoreAbout() {
           <h2 className="">
             <span className="text-[#030442]">Fabiyi Oloruntobi Victor</span> is
             a graduate of medical physiology from the University of Ilorin
-            Nigeria and he had his masters  degree in business administration (MBA) from
-            Ahamdu Bello University, Zaria, Nigeria, aslo, certificate in
-            leadership and management in health, (Cert.LMH) awarded by
-            University of Washington He has been into pharmaceutical sales now over
-            a decade and currently Regional Sales Manager in one of the leading
-            pharmaceutical company in Nigeria (Fidson Healthcare plc). He's
-            passionate about the welfare of children and a sane society
+            Nigeria and he had his masters degree in business administration
+            (MBA) from Ahamdu Bello University, Zaria, Nigeria, aslo,
+            certificate in leadership and management in health, (Cert.LMH)
+            awarded by University of Washington He has been into pharmaceutical
+            sales now over a decade and currently Regional Sales Manager in one
+            of the leading pharmaceutical company in Nigeria (Fidson Healthcare
+            plc). He's passionate about the welfare of children
+            and a sane society
           </h2>
         </div>
       </div>
@@ -280,7 +281,7 @@ function MoreAbout() {
         <div className="flex-1 ">
           <h2 className="text-[#030442]  mb-2 lg:ml-0 ml-3">PROJECT MANAGER</h2>
           <h2 className="lg:ml-0 ml-3">
-            <span className="text-[#030442]">  Adewumi Oluwasegun </span>
+            <span className="text-[#030442]"> Adewumi Oluwasegun </span>
             holds a Bachelor degree in Pharmacy from University of Ibadan. He
             also hold An MBA from Obafemi Awolowo University ile Ife where he
             majors in Marketing. Oluwasegun is a seasoned sales man having
@@ -313,24 +314,24 @@ function MoreAbout() {
           alt=""
         />
         <div>
-          <h2 className="text-[#030442] mb-2">MEDICAL AND FINANCIAL DIRECTOR</h2>
+          <h2 className="text-[#030442] mb-2">
+            MEDICAL AND FINANCIAL DIRECTOR
+          </h2>
           <h2 className="">
             <span className="text-[#030442]">
               {" "}
-              Alatishe-Muhammad Bilqis Wuraola{" "}
+              Dr.Bilqis Wuraola Alatishe-Muhammad{" "}
             </span>{" "}
-            is a distinguished medical doctor with extensive qualifications and
-            experience. She obtained her M.B.B.S from Ahfad University for Women
-            in Khartoum, Sudan. Additionally, she holds a Master's in Public
-            Health (MPH) from the University of Ilorin, Nigeria, and an MBA from
-            Ahmadu Bello University, Zaria, Nigeria. Dr. Alatishe-Muhammad is
-            also a public health consultant and serves as a lecturer at both the
-            University of Ilorin and the University of Ilorin Teaching Hospital
-            in Ilorin, Kwara State, Nigeria. With over a decade in the medical
-            profession, she brings a wealth of expertise to her field.
-            Currently, she is the Financial Secretary for the Medical Women
-            Association of Nigeria. Her passion lies in improving the well-being
-            of children and others.
+            is a Consultant Public Health Physician.(MB;BS,
+            Khartoum)(MPH,Ilorin), (Cert.M&E Washington)((Cert.LMH,
+            Washington)(MBA, Zaria) (Dip.Law,Ilorin)(PGDE, Ilorin) (Ph.D,Kota
+            Bharu). Dr. Bilqis works as a Consultant/Lecturer at University of
+            Ilorin Teaching Hospital/ University of Ilorin, Kwara State,
+            Nigeria. Currently, she is the National Financial Secretary for the
+            Medical Women Association of Nigeria. Her passion lies in improving
+            the well-being of women, children and others. With almost two
+            decades experience in the Medical Profession, she brings a wealth of
+            expertise to the OOCF.
           </h2>
         </div>
       </div>

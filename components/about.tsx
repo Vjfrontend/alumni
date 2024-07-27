@@ -42,7 +42,7 @@ function About() {
             </p>
           </div>
 
-          <button className="bg-[#030442] rounded-md p-2 mt-4 text-white shadow-lg  mb-3 ">
+          <button className="bg-[#030442] rounded-md p-2 mt-4 text-white  hover:bg-white hover:text-[#030442] shadow-lg  mb-3 ">
             <Link href="/more-about"> More About Us</Link>
           </button>
         </div>

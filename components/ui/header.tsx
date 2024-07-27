@@ -136,7 +136,7 @@ export default function Header() {
             <ul className="flex grow justify-center flex-wrap items-center">
               <li>
                 <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent  hover:border-b-white hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  mx-4 lg:mx-5"
+                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent  hover:border-b-[#030442] hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  mx-4 lg:mx-5"
                   href="/"
                 >
                   Home
@@ -144,7 +144,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent rounded-md hover:border-b-white  px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent rounded-md hover:border-b-[#030442] px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="/more-about"
                 >
                   About us
@@ -153,7 +153,7 @@ export default function Header() {
 
               <li>
                 <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="/#impact"
                 >
                   Impact
@@ -161,7 +161,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="#"
                 >
                   Outreach
@@ -170,7 +170,7 @@ export default function Header() {
 
               <li>
                 <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="/#testimonials"
                 >
                   Testimonials
@@ -186,7 +186,7 @@ export default function Header() {
               </li> */}
               <li>
                 <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href='/#contact'
                 >
                   Contact
