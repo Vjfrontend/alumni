@@ -1,98 +1,42 @@
-import Testimonial from "@/components/testimonial";
-export default function TestimonialsCarousel() {
-  const testimonials = [
-    {
-      name: "Felicia Taiwo",
+import Image from "next/image";
 
-      date: "july 24, 2024",
-      content:
-        "I've known the Chairman of OOCF for over a decade, and his commitment to helping the less privileged has been inspiring. His vision, which predates the foundation, has positively impacted many lives and exemplifies true generosity.",
-    },
+const images = Array(8).fill({
+  src: "/images/vj.jpg", // Make sure the image is placed in the public folder
+  year: 2003,
+});
 
-    {
-      name: "Oduwole Ademola",
-
-      date: "july 20, 2024",
-      content:
-        // "The Chairman's support is a warm embrace in challenging times. His dedication to humanity is inspiring. He's a living example of selfless service and compassion!.",
-        "I have known the Chairman of OOCF for over a decade. His passion to help the less privileged led to the foundation's creation. Even before its establishment, he was making a significant impact, showing that generosity and compassion still exist."
-
-
-
-
-
-
-
-    },
-    {
-      name: "Temitayo Ogunmuyiwa",
-
-      date: "july 26, 2024",
-      content:
-        "I am thrilled to endorse Oloruntobi, the Chairman of OOCF, whose unwavering passion and dedication to the welfare of underprivileged children is truly inspiring. His empathy, vision, and commitment will undoubtedly drive the success of this NGO and make a profound impact on countless lives.",
-    },
-  ];
-
+export default function Gallery() {
   return (
-    <section
-      id="testimonials"
-      className="relative before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:h-[120%] before:bg-gradient-to-b before:from-gray-100"
-    >
-      <div className="pt-12 md:pt-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-xl font-bold md:text-xl">
-              Testimonials & Mentions
-            </h2>
-          </div>
-        </div>
-        <div className="relative mx-auto flex max-w-[94rem] justify-center">
-          <div
-            className="absolute bottom-20 -z-10 -translate-x-36"
-            aria-hidden="true"
-          >
-            <div className="h-80 w-80 rounded-full bg-gradient-to-tr from-blue-500 to-[#030442] opacity-30 blur-[160px]" />
-          </div>
-          <div className="absolute -bottom-10 -z-10" aria-hidden="true">
-            <div className="h-80 w-80 rounded-full bg-blue-500 opacity-40 blur-[160px]" />
-          </div>
-          <div className="absolute bottom-0 -z-10" aria-hidden="true">
-            <div className="h-56 w-56 rounded-full border-[20px] border-white blur-[20px]" />
-          </div>
-          {/* Row */}
-          <div className="group inline-flex w-full flex-nowrap py-12 [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)] md:py-20">
-            <div className="flex animate-[infinite-scroll_60s_linear_infinite] items-start justify-center group-hover:[animation-play-state:paused] md:justify-start [&>*]:mx-3">
-              {/* Items */}
-              {testimonials.map((testimonial, index) => (
-                <Testimonial
-                  key={index}
-                  testimonial={testimonial}
-                  className="w-[22rem] transition-transform duration-300 group-hover:rotate-0"
-                >
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div>
-            {/* Duplicated element for infinite scroll */}
-            <div
-              className="flex animate-[infinite-scroll_60s_linear_infinite] items-start justify-center group-hover:[animation-play-state:paused] md:justify-start [&>*]:mx-3"
-              aria-hidden="true"
-            >
-              {/* Items */}
-              {testimonials.map((testimonial, index) => (
-                <Testimonial
-                  key={index}
-                  testimonial={testimonial}
-                  cloned={true}
-                  className="w-[22rem] transition-transform duration-300 group-hover:rotate-0"
-                >
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div>
-          </div>
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6 md:px-16">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
+        <h1 className="text-3xl font-bold text-gray-800">GALLERY</h1>
+        <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
+          <button className="font-semibold text-black underline">All</button>
+          <button className="hover:text-black">Old Memories</button>
+          <button className="hover:text-black">Events</button>
+          <button className="hover:text-black">Recent</button>
         </div>
       </div>
-    </section>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {images.map((img, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={img.src}
+              alt={`Gallery image ${index}`}
+              width={400}
+              height={400}
+              layout="responsive"
+              objectFit="cover"
+            />
+            <div className="p-3 text-center">
+              <p className="font-semibold text-lg text-gray-700">{img.year}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
