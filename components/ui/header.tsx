@@ -56,7 +56,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent rounded-md hover:border-b-[#030442] px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="/about"
                 >
                   About us
                 </Link>
@@ -73,7 +73,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="/contact"
                 >
                   Contact
                 </Link>

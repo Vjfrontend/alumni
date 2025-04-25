@@ -1,0 +1,40 @@
+"use client"
+import React from 'react';
+import Image from 'next/image';
+import GoogleMap from '@/components/GoogleMap';
+import ContactForm from '@/components/ContactForm';
+import Button from '@/components/ui/button'; // Adjust the path based on your project structure
+
+const Contact = () => {
+  return (
+  <>
+  <div className="relative h-[500px] w-full">
+          <Image src="/images/school.jpg" alt="School building" fill className="object-cover brightness-75" priority />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+            <h1 className="text-white text-lg font-bold mb-1">JOGSOBA &apos;98</h1>
+            <h2 className="text-[#FFD700] text-4xl font-bold mb-3">Contact</h2>
+            <p className="text-white lg:text-2xl text-base max-w-lg mb-4 px-4">
+              A prestigious alumni group of students of IGBOBI OKE GRAMMAR SCHOOL, founded on the premise of giving back
+              to the society towards the advancement of our alma mater and the community at large.
+            </p>
+            <Button 
+              className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-medium px-8 rounded" 
+              label="EXPLORE" 
+              onClick={() => console.log('Explore button clicked')} 
+            />
+          </div>
+        </div>
+    <div className="flex flex-col md:flex-row justify-center items-center mt-28 bg-white ">
+    <div className="w-full md:w-1/2 flex justify-center p-4">
+      <GoogleMap latitude={37.7749} longitude={-122.4194} zoom={10} />
+    </div>
+    <div className="w-full md:w-1/2 flex justify-center p-4">
+      <ContactForm />
+    </div>
+  </div>
+  
+  </>
+  );
+};
+
+export default Contact;
