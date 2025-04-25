@@ -28,10 +28,10 @@ export default function Header() {
 
   return (
     <header className=" absolute top-2 z-30 w-full md:top-6">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className=" flex h-14 items-center justify-between gap-3 rounded-2xl  before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100), before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Site branding */}
-          <div className="flex flex-1 items-center">
+          <div className="flex flex-1 items-center justify-start">
             <Image
               className="rounded-full"
               src={oocf}
@@ -48,7 +48,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#fafafa] border-b-2 border-transparent  hover:border-b-[#030442] hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  mx-4 lg:mx-5"
-                  href="#"
+                  href="/"
                 >
                   Home
                 </Link>
@@ -82,7 +82,7 @@ export default function Header() {
               <li>
                 <Link
                   className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
+                  href="/gallery"
                 >
                   Gallery
                 </Link>
