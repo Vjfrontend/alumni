@@ -2,6 +2,7 @@ import './css/style.css'
 
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
+import BackToTopButton from '@/components/backtotop'
 
 
 const inter = Inter({
@@ -44,6 +45,8 @@ export default function RootLayout({
       <body className={`${inter.variable} ${cabinet.variable} font-cabinet-grotesk antialiased bg-gray-100 text-gray-800 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           {children}
+          <BackToTopButton />
+
         </div>
       </body>
     </html>

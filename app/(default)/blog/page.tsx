@@ -25,6 +25,8 @@ export default function Home() {
 
   return (
     <div className="">
+                      <title>blog</title>
+
          <div className="relative h-[450px] w-full">
                 <Image src="/images/school.jpg" alt="School building" fill className="object-cover brightness-75" priority />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">

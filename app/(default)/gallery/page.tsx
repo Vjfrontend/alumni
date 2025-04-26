@@ -6,6 +6,8 @@ import Button from "@/components/ui/button"
 export default function Gallery() {
   return (
     <main className="min-h-screen bg-white">
+              <title>gallery</title>
+
       {/* Hero Section */}
       <div className="relative h-[450px] w-full">
         <Image src="/images/school.jpg" alt="School building" fill className="object-cover brightness-75" priority />

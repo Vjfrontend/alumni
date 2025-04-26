@@ -15,6 +15,8 @@ export default function AboutPage() {
       ]
   return (
     <main className="min-h-screen bg-white">
+                    <title>about us</title>
+
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image src="/images/school.jpg" alt="School building" fill className="object-cover brightness-75" priority />

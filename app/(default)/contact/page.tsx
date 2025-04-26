@@ -8,6 +8,8 @@ import Button from '@/components/ui/button'; // Adjust the path based on your pr
 const Contact = () => {
   return (
   <>
+                <title>Contact</title>
+
   <div className="relative h-[500px] w-full">
           <Image src="/images/school.jpg" alt="School building" fill className="object-cover brightness-75" priority />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
