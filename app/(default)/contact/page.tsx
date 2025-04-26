@@ -24,7 +24,7 @@ const Contact = () => {
             />
           </div>
         </div>
-    <div className="flex flex-col md:flex-row justify-center items-center mt-28 bg-white ">
+    <div className="flex flex-col md:flex-row justify-center items-center mt-28 max-w-7xl mx-auto bg-white ">
     <div className="w-full md:w-1/2 flex justify-center p-4">
       <GoogleMap latitude={37.7749} longitude={-122.4194} zoom={10} />
     </div>
