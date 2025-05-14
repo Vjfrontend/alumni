@@ -1,18 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import ab from "@/public/images/logo1.png";
+import ab from "@/public/images/logo.png";
 import Link from "next/link";
 
 function About() {
   return (
     <div id="about" className="   shadow-black/[0.03]  mt-20 ">
       <div className="relative flex flex-col-reverse  lg:flex-row-reverse items-center mt-16 mx-auto  ">
-        <div className="lg:w-1/2  bg-gray-100 lg:order-last mt-8 lg:mt-0  ">
+        <div className="lg:w-1/2   lg:order-last mt-8 lg:mt-0  ">
           <Image
             src={ab}
             layout="fit"
-            // width={700}
-            // height={200}
+            width={700}
+            height={200}
             className="object-contain rounded-lg  h-80 "
             alt=""
           />
@@ -22,7 +22,7 @@ function About() {
         <div className="lg:w-1/2 lg:order-first   bg-purple-400 lg:p-20 p-8">
           <div className="text-center lg:text-left">
             <div className="flex text-center">
-              <h2 className="text-yellow-400 font-mono text-center text-3xl pb-3">
+              <h2 className="text-yellow-400 font-bold text-center  text-3xl pb-3">
                 {" "}
                 Mission
               </h2>
@@ -30,9 +30,12 @@ function About() {
           </div>
           <div className=" mb-4  ">
             <p className="text-black ">
-              to build a strong networkof alumni,fater educational and
-              professional growth ,and contribute meaningfully to the
-              development of ijebu-ode grammer school and society at large
+              To develop and keep social contacts among the old boys of the
+              association, alive, active and serve as a forum to promote and
+              foster the relationship between the alumni, present students, the
+              staff and the management of school with the basic objective to
+              exchange ideas, in achieving excellence and professional
+              competence and contribute to improve the quality of life.
             </p>
           </div>
         </div>

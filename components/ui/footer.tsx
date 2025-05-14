@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="space-y-4">
           <div className="w-20">
             <Image
-              src="/images/logo.jpg" // Replace with your actual logo path
+              src="/images/logo.png" // Replace with your actual logo path
               alt="Logo"
               width={80}
               height={80}

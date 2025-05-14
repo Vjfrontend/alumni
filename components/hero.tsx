@@ -66,9 +66,10 @@ const Hero = () => {
         <h2 className=" lg:ml-8 mt-6 ml-0 sm:text-2xl lg:text-3xl  font-regular  font-bold  sm:text-left ">
         Jogsoga '98</h2>
           <h2 className="text-xl lg:ml-8  ml-0 sm:text-4xl lg:text-6xl  font-sans  font-bold mb-4 sm:text-left ">
-              <span className="text-yellow-400">Rekindle . Reconnect .</span>
-            <br className="hidden lg:block" />
-            <span>Give Back</span>
+              <span className="text-yellow-400">One For All .
+                 <br className="hidden lg:block" /> All For One </span>
+            {/* <br className="hidden lg:block" />
+            <span>Give Back</span> */}
           </h2>
           <div className=" sm:text-left   sm:mt-0">
             <p className="text-base sm:text-lg max-w-xl lg:ml-7 ml-0 lg:text-xl mb-4 ">

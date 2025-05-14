@@ -9,7 +9,7 @@ import PostAuthor03 from '@/public/images/blog-author-03.jpg'
 export default function Blog() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 md:pb-20">

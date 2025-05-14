@@ -1,14 +1,14 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 
 import Link from "next/link";
-import oocf from "@/public/images/logo.jpg";
+import oocf from "@/public/images/logo.png";
 import Image from "next/image";
 
 import MobileMenu from "./mobile-menu";
 import { usePathname } from "next/navigation";
+import DropdownMenu from "@/components/Dropdown";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
@@ -25,6 +25,13 @@ export default function Header() {
     window.addEventListener("scroll", scrollHandler);
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
+  const membershipItems = [
+    { label: "JOIN NOW", href: "/join" },
+    { label: "Members", href: "/members" },
+    { label: "OLD BOYS DATA", href: "/old-boys-data" },
+    { label: "RENEW", href: "/renew" },
+    { label: "Be on a committee", href: "/committee" },
+  ];
 
   return (
     <header className=" absolute top-2 z-30 w-full md:top-6">
@@ -87,21 +94,13 @@ export default function Header() {
                   Gallery
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  className="font-medium text-sm text-[#030442] border-b-2 border-transparent px-2  rounded-md hover:border-b-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="#"
-                >
-                  Media
-                </Link>
-              </li> */}
-              <li>
-                <Link
-                  className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href='/'
-                >
-                  Donation
-                </Link>
+
+              <li className="flex items-center">
+                <DropdownMenu
+                  title="Membership"
+                  items={membershipItems}
+                  className="text-[#fafafafa]"
+                />
               </li>
             </ul>
           </nav>

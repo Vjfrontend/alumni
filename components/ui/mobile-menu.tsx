@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
+import DropdownMenu from "@/components/Dropdown";
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
@@ -35,6 +36,13 @@ export default function MobileMenu() {
     document.addEventListener("keydown", keyHandler);
     return () => document.removeEventListener("keydown", keyHandler);
   });
+  const membershipItems = [
+    { label: "JOIN NOW", href: "/join" },
+    { label: "Members", href: "/members" },
+    { label: "OLD BOYS DATA", href: "/old-boys-data" },
+    { label: "RENEW", href: "/renew" },
+    { label: "Be on a committee", href: "/committee" },
+  ];
 
   return (
     <div className="flex md:hidden">
@@ -139,14 +147,12 @@ export default function MobileMenu() {
                 Gallery
               </Link>
             </li>
-            <li>
-              <Link
-                href="#"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Donation{" "}
-              </Link>
+            <li className="flex  rounded-lg   text-gray-700 hover:bg-[#030442]">
+              <DropdownMenu
+                title="Membership"
+                items={membershipItems}
+                className="text-black"
+              />
             </li>
           </ul>
         </Transition>
