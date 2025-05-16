@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 const MEMBER_CATEGORIES = {
   new: {
@@ -33,8 +34,14 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => setCurrentPage((prev) => Math.min(prev + 1, 1)),
+    onSwipedRight: () => setCurrentPage((prev) => Math.max(prev - 1, 0)),
+    trackMouse: true, // enables swipe with mouse on desktop for testing
+  });
+
   return (
-    <main className="min-h-screen ">
+    <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full">
         <div className="absolute inset-0 z-0">
@@ -46,7 +53,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="relative z-10 flex h-full flex-col justify-center  p-4 sm:p-8">
+        <div className="relative z-10 flex h-full flex-col justify-center p-4 sm:p-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-8 text-yellow-400 tracking-wide">
             membership portal
           </h1>
@@ -79,14 +86,14 @@ export default function Home() {
                   <MemberCard data={MEMBER_CATEGORIES.old} link="/signin" />
                 </>
               ) : (
-                <>
+                <div {...swipeHandlers}>
                   {currentPage === 0 && (
                     <MemberCard data={MEMBER_CATEGORIES.new} link="/join" />
                   )}
                   {currentPage === 1 && (
                     <MemberCard data={MEMBER_CATEGORIES.old} link="/signin" />
                   )}
-                </>
+                </div>
               )}
             </div>
 
@@ -125,9 +132,7 @@ type MemberCardProps = {
 
 function MemberCard({ data, link }: MemberCardProps) {
   return (
-    <div className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02] mb-3 md:mb-0">
-            <title>membership</title>
-
+    <div className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02] mb-6 md:mb-0">
       <div className="relative h-48 sm:h-60 w-full">
         <Image
           src={data.image || "/placeholder.svg"}
