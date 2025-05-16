@@ -15,7 +15,7 @@ const Contact = () => {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-white text-lg font-bold mb-1">JOGSOBA &apos;98</h1>
             <h2 className="text-[#FFD700] text-4xl font-bold mb-3">Contact</h2>
-            <p className="text-white lg:text-2xl text-base max-w-lg mb-4 px-4">
+            <p className="text-white lg:text-2xl text-base max-w-4xl mb-4 px-4">
               A prestigious alumni group of students of IGBOBI OKE GRAMMAR SCHOOL, founded on the premise of giving back
               to the society towards the advancement of our alma mater and the community at large.
             </p>

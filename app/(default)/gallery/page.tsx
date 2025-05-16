@@ -66,7 +66,7 @@ export default function Gallery() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
           <h1 className="text-white text-xl font-bold mb-1">JOGSOBA &apos;98</h1>
           <h2 className="text-[#FFD700] text-4xl font-bold mb-3">GALLERY</h2>
-          <p className="text-white text-xs lg:text-2xl max-w-lg mb-4">
+          <p className="text-white text-xs lg:text-2xl max-w-4xl mb-4">
             a platform where past students of ijebu-ode grammar school, 1998 set, reconnect, collaborate and contribute towards the development of our alma mater and the community.
           </p>
           <Button

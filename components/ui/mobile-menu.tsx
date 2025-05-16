@@ -38,9 +38,9 @@ export default function MobileMenu() {
   });
   const membershipItems = [
     { label: "JOIN NOW", href: "/join" },
-    { label: "Members", href: "/members" },
+    { label: "Members", href: "/membership/new" },
     { label: "OLD BOYS DATA", href: "/old-boys-data" },
-    { label: "RENEW", href: "/renew" },
+    { label: "Payment", href: "/payment" },
     { label: "Be on a committee", href: "/committee" },
   ];
 
@@ -105,7 +105,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Home
@@ -114,7 +114,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/about"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
                 About us
@@ -123,7 +123,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/blog"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Blog
@@ -132,7 +132,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/contact"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Contact
@@ -141,13 +141,13 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/gallery"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-[#030442]"
+                className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Gallery
               </Link>
             </li>
-            <li className="flex  rounded-lg   text-gray-700 hover:bg-[#030442]">
+            <li className="flex  rounded-lg   text-gray-700 pointer-events-auto">
               <DropdownMenu
                 title="Membership"
                 items={membershipItems}

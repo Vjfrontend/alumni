@@ -27,9 +27,9 @@ export default function Header() {
   }, [top]);
   const membershipItems = [
     { label: "JOIN NOW", href: "/join" },
-    { label: "Members", href: "/members" },
+    { label: "Members", href: "/membership/new" },
     { label: "OLD BOYS DATA", href: "/old-boys-data" },
-    { label: "RENEW", href: "/renew" },
+    { label: "Payment", href: "/payment" },
     { label: "Be on a committee", href: "/committee" },
   ];
 
