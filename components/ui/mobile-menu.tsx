@@ -37,11 +37,11 @@ export default function MobileMenu() {
     return () => document.removeEventListener("keydown", keyHandler);
   });
   const membershipItems = [
-    { label: "JOIN NOW", href: "/join" },
+    { label: "JOIN NOW", href: "/login" },
     { label: "Members", href: "/membership/new" },
-    { label: "OLD BOYS DATA", href: "/old-boys-data" },
+    { label: "OLD BOYS DATA", href: "/signup" },
     { label: "Payment", href: "/payment" },
-    { label: "Be on a committee", href: "/committee" },
+    { label: "Be on a committee", href: "/signup" },
   ];
 
   return (
