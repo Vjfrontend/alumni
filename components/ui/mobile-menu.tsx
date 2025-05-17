@@ -37,9 +37,9 @@ export default function MobileMenu() {
     return () => document.removeEventListener("keydown", keyHandler);
   });
   const membershipItems = [
-    { label: "JOIN NOW", href: "/login" },
+    { label: "JOIN NOW", href: "/signup" },
     { label: "Members", href: "/membership/new" },
-    { label: "OLD BOYS DATA", href: "/signup" },
+    { label: "OLD BOYS DATA", href: "/login" },
     { label: "Payment", href: "/payment" },
     { label: "Be on a committee", href: "/signup" },
   ];

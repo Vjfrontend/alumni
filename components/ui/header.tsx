@@ -26,9 +26,9 @@ export default function Header({ className = "" }: { className?: string }): Reac
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
   const membershipItems = [
-    { label: "JOIN NOW", href: "/login" },
+    { label: "JOIN NOW", href: "/signup" },
     { label: "Members", href: "/membership/new" },
-    { label: "OLD BOYS DATA", href: "/signup" },
+    { label: "OLD BOYS DATA", href: "/login" },
     { label: "Payment", href: "/payment" },
     { label: "Be on a committee", href: "/signup" },
   ];

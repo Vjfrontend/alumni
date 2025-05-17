@@ -83,7 +83,7 @@ export default function Home() {
               {!isMobile ? (
                 <>
                   <MemberCard data={MEMBER_CATEGORIES.new} link="/login" />
-                  <MemberCard data={MEMBER_CATEGORIES.old} link="/signin" />
+                  <MemberCard data={MEMBER_CATEGORIES.old} link="/signup" />
                 </>
               ) : (
                 <div {...swipeHandlers}>
