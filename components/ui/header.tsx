@@ -10,7 +10,7 @@ import MobileMenu from "./mobile-menu";
 import { usePathname } from "next/navigation";
 import DropdownMenu from "@/components/Dropdown";
 
-export default function Header() {
+export default function Header({ className = "" }: { className?: string }): React.ReactElement {
   const [top, setTop] = useState<boolean>(true);
   // const pathname = usePathname();
   // // const pathname = router.pathname
@@ -34,7 +34,7 @@ export default function Header() {
   ];
 
   return (
-    <header className=" absolute top-2 z-30 w-full md:top-6">
+    <header className={`absolute  z-30 w-full  ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className=" flex h-14 items-center justify-between gap-3 rounded-2xl  before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100), before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Site branding */}

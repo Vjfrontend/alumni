@@ -23,7 +23,7 @@ const Home = () => {
                 </h1>
                 <div className="mt-4">
                   <Link
-                    href="#"
+                    href="/login"
                     className="inline-flex items-center justify-center rounded-full bg-red-500 px-4 sm:px-6 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                   >
                     <span className="text-lg font-semibold">sign in </span>

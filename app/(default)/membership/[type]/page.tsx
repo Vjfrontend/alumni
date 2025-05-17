@@ -59,7 +59,7 @@ export default function Home() {
           </h1>
           <div className="mt-4">
             <Link
-              href="#"
+              href="/login"
               className="inline-flex items-center justify-center rounded-full bg-red-500 px-4 sm:px-6 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
             >
               <span className="text-lg font-semibold">Join Now</span>
@@ -82,16 +82,16 @@ export default function Home() {
             <div className="md:grid md:grid-cols-2 gap-6 sm:gap-8">
               {!isMobile ? (
                 <>
-                  <MemberCard data={MEMBER_CATEGORIES.new} link="/join" />
+                  <MemberCard data={MEMBER_CATEGORIES.new} link="/login" />
                   <MemberCard data={MEMBER_CATEGORIES.old} link="/signin" />
                 </>
               ) : (
                 <div {...swipeHandlers}>
                   {currentPage === 0 && (
-                    <MemberCard data={MEMBER_CATEGORIES.new} link="/join" />
+                    <MemberCard data={MEMBER_CATEGORIES.new} link="/signup" />
                   )}
                   {currentPage === 1 && (
-                    <MemberCard data={MEMBER_CATEGORIES.old} link="/signin" />
+                    <MemberCard data={MEMBER_CATEGORIES.old} link="/login" />
                   )}
                 </div>
               )}
