@@ -98,7 +98,6 @@ export default function Gallery() {
             <h3 className="text-xl font-bold mb-2">{currentText.title}</h3>
             <p className="text-sm text-gray-700">{currentText.description}</p>
           </div>
-          import Link from 'next/link';
 
 <Link href="https://drive.google.com/folderview?id=1pnBgriT9Wr6kfD9k8QCIY8ssjY2BmTbG" target="_blank">
   <p className="bg-[#5D2D91] hover:bg-[#4A2275] text-white text-sm rounded px-4 py-2 inline-block">
