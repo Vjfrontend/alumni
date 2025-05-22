@@ -3,30 +3,31 @@ import { useState } from "react"
 import Image from "next/image"
 import { Play } from "lucide-react"
 import Button from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Gallery() {
   const [selectedYear, setSelectedYear] = useState("All")
 
   const imagesByYear: Record<string, string[]> = {
     All: [
-      "/images/gallery1.png",
-      "/images/gallery2.png",
-      "/images/gallery3.png",
-      "/images/gallery4.png",
-      "/images/gallery5.png",
-      "/images/gallery6.png",
+      "/images/1.jpg",
+      "/images/11.jpg",
+      "/images/12.jpg",
+      "/images/13.jpg",
+      "/images/2.jpg",
+      "/images/3.jpg",
     ],
     "2001": [
-      "/images/gallery1.png",
-      "/images/gallery2.png",
+      "/images/21.jpg",
+      "/images/14.jpg",
     ],
     "2002": [
-      "/images/gallery3.png",
-      "/images/gallery4.png",
+      "/images/31.jpg",
+      "/images/15.jpg",
     ],
     "2003": [
-      "/images/gallery5.png",
-      "/images/gallery6.png",
+      "/images/16.jpg",
+      "/images/17.jpg",
     ],
   }
 
@@ -97,11 +98,14 @@ export default function Gallery() {
             <h3 className="text-xl font-bold mb-2">{currentText.title}</h3>
             <p className="text-sm text-gray-700">{currentText.description}</p>
           </div>
-          <Button
-            label="View Album"
-            className="bg-[#5D2D91] hover:bg-[#4A2275] text-white text-sm rounded"
-            onClick={() => console.log("View Album clicked")}
-          />
+          import Link from 'next/link';
+
+<Link href="https://drive.google.com/folderview?id=1pnBgriT9Wr6kfD9k8QCIY8ssjY2BmTbG" target="_blank">
+  <p className="bg-[#5D2D91] hover:bg-[#4A2275] text-white text-sm rounded px-4 py-2 inline-block">
+    View Album
+  </p>
+</Link>
+
         </div>
 
         {/* Gallery Grid */}

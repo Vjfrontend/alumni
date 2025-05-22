@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import Link from "next/link";
-import carousel04 from "../public/images/student.jpg";
-import carousel05 from "../public/images/a2.jpg";
-import carousel07 from "@/public/images/school.jpg";
+import carousel04 from "../public/images/13.jpg";
+import carousel05 from "../public/images/IMG_0189.jpg";
+import carousel07 from "@/public/images/7.jpg";
 
 const slides = [
   {
@@ -48,7 +48,7 @@ const Hero = () => {
 
   return (
     <div className="relative bg-gray-100">
-        <div className="bg-purple-400 absolute w-full h-full z-10 bg-opacity-20"></div>
+        {/* <div className="bg-purple-400 absolute w-full h-full z-10 bg-opacity-20"></div> */}
       <div className="mx-auto ">
         
         <div className="relative w-[100%] h-[80vw] pt-20 sm:h-[50vw] lg:h-[40vw]">

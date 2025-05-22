@@ -5,37 +5,37 @@ import Image from "next/image";
 
 // Example image sets (replace with your actual images)
 const allImages = [
-  { src: "/images/vj.jpg", year: 2003 },
-  { src: "/images/old1.jpg", year: 1998 },
-  { src: "/images/event1.jpg", year: 2012 },
-  { src: "/images/recent1.jpg", year: 2024 },
-  { src: "/images/old2.jpg", year: 2001 },
-  { src: "/images/event2.jpg", year: 2016 },
-  { src: "/images/recent2.jpg", year: 2023 },
-  { src: "/images/vj2.jpg", year: 2005 },
+  { src: "/images/7.jpg", year: 2003 },
+  { src: "/images/8.jpg", year: 1998 },
+  { src: "/images/9.jpg", year: 2012 },
+  { src: "/images/10.jpg", year: 2024 },
+  { src: "/images/11.jpg", year: 2001 },
+  { src: "/images/12.jpg", year: 2016 },
+  { src: "/images/13.jpg", year: 2023 },
+  { src: "/images/14.jpg", year: 2005 },
 ];
 
 const oldMemories = [
-  { src: "/images/old1.jpg", year: 1998 },
-  { src: "/images/old2.jpg", year: 2001 },
-  { src: "/images/old3.jpg", year: 1995 },
-  { src: "/images/old4.jpg", year: 2000 },
+  { src: "/images/1.jpg", year: 1998 },
+  { src: "/images/2.jpg", year: 2001 },
+  { src: "/images/3.jpg", year: 1995 },
+  { src: "/images/4.jpg", year: 2000 },
 ];
 
 const events = [
-  { src: "/images/event1.jpg", year: 2012 },
-  { src: "/images/event2.jpg", year: 2016 },
-  { src: "/images/event3.jpg", year: 2018 },
-  { src: "/images/event4.jpg", year: 2015 },
-  { src: "/images/event5.jpg", year: 2013 },
+  { src: "/images/23.jpg", year: 2012 },
+  { src: "/images/24.jpg", year: 2016 },
+  { src: "/images/25.jpg", year: 2018 },
+  { src: "/images/26.jpg", year: 2015 },
+  { src: "/images/27.jpg", year: 2013 },
 ];
 
 const recent = [
-  { src: "/images/recent1.jpg", year: 2024 },
-  { src: "/images/recent2.jpg", year: 2023 },
-  { src: "/images/recent3.jpg", year: 2022 },
-  { src: "/images/recent4.jpg", year: 2021 },
-  { src: "/images/recent5.jpg", year: 2020 },
+    { src: "/images/23.jpg", year: 2012 },
+  { src: "/images/24.jpg", year: 2016 },
+  { src: "/images/25.jpg", year: 2018 },
+  { src: "/images/26.jpg", year: 2015 },
+  { src: "/images/27.jpg", year: 2013 },
 ];
 
 const categories: Record<string, { src: string; year: number }[]> = {
@@ -84,7 +84,7 @@ export default function Gallery() {
               />
             </div>
             <div className="p-3 text-center">
-              <p className="font-semibold text-lg text-gray-700">{img.year}</p>
+<p className="font-semibold text-lg text-gray-700">jogsoba'98</p>
             </div>
           </div>
         ))}
