@@ -20,7 +20,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/images/school.jpg"
+          src="/images/14.jpg"
           alt="School building"
           fill
           className="object-cover brightness-75"

@@ -63,7 +63,7 @@ export default function Gallery() {
 
       {/* Hero Section */}
       <div className="relative h-[450px] w-full">
-        <Image src="/images/school.jpg" alt="School building" fill className="object-cover brightness-75" priority />
+        <Image src="/images/14.jpg" alt="School building" fill className="object-cover brightness-75" priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
           <h1 className="text-white text-xl font-bold mb-1">JOGSOBA &apos;98</h1>
           <h2 className="text-[#FFD700] text-4xl font-bold mb-3">GALLERY</h2>
