@@ -1,30 +1,35 @@
 // components/ResponsibilitySection.js
 
-import { FaGraduationCap, FaHandsHelping, FaUniversity, FaUsers } from 'react-icons/fa';
+import {
+  Award,
+  Handshake,
+  Library,
+  UsersRound
+} from 'lucide-react';
 
 const responsibilities = [
   {
-    icon: <FaGraduationCap className="text-3xl text-green-600" />,
+    icon: <Award className="w-10 h-10 text-green-600" />,
     title: "Scholarship",
-    text: "Empower Future Generations Support the dreams of deserving students by contributing to our scholarship fund. Your generosity helps provide access to quality education, giving young minds the chance to excel and shape a better tomorrow.",
+    text: "Empower Future Generations Support the dreams of deserving students by contributing to our scholarship fund. Your generosity helps provide access to quality education, giving young minds the chance to excel and shape a better tomorrow.",
     bg: "bg-blue-100"
   },
   {
-    icon: <FaHandsHelping className="text-3xl text-yellow-600" />,
+    icon: <Handshake className="w-10 h-10 text-yellow-600" />,
     title: "Help Current Students",
-    text: "Be the Bridge Between Learning and Opportunity Share your experience, time, or resources to guide current students. From mentorship programs to internship opportunities, your involvement makes a meaningful difference in their academic and professional journeys.",
+    text: "Be the Bridge Between Learning and Opportunity Share your experience, time, or resources to guide current students. From mentorship programs to internship opportunities, your involvement makes a meaningful difference in their academic and professional journeys.",
     bg: "bg-yellow-100"
   },
   {
-    icon: <FaUniversity className="text-3xl text-purple-600" />,
+    icon: <Library className="w-10 h-10 text-purple-600" />,
     title: "Help Our University",
-    text: "Invest in the Growth of Your Alma Mater Contribute to school projects, research funding, or infrastructure development. Your support helps maintain our institution’s excellence and fosters innovation for future generations of students.",
+    text: "Invest in the Growth of Your Alma Mater Contribute to school projects, research funding, or infrastructure development. Your support helps maintain our institution’s excellence and fosters innovation for future generations of students.",
     bg: "bg-purple-100"
   },
   {
-    icon: <FaUsers className="text-3xl text-green-600" />,
+    icon: <UsersRound className="w-10 h-10 text-green-600" />,
     title: "Build Our Community",
-    text: "Stay Connected, Make an Impact Join a vibrant network of alumni dedicated to lifelong connections and collaborative growth. Whether it’s through events, forums, or community service, your participation strengthens the bonds that began on campus.",
+    text: "Stay Connected, Make an Impact Join a vibrant network of alumni dedicated to lifelong connections and collaborative growth. Whether it’s through events, forums, or community service, your participation strengthens the bonds that began on campus.",
     bg: "bg-green-100"
   }
 ];
