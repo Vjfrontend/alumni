@@ -35,7 +35,7 @@ export default function Gallery() {
     All: {
       title: "Meet And Greet 2018",
       description:
-        "Etiam vitae tortor. Curabitur nisi. In hac habitasse platea dictumst. Praesent ac massa at ligula laoreet iaculis. Sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, quis venenatis ante odio sit amet eros. Nullam quis ante. Curabitur vestibulum.",
+        "A prestigious alumni group of students of IGBOBI OKE GRAMMAR SCHOOL, founded on the premise of giving back to the society towards the advancement of our alma mater and the community at large.",
     },
     "2001": {
       title: "School Reunion 2001",
