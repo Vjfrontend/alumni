@@ -66,13 +66,13 @@ export default function Gallery() {
         <Image src="/images/14.jpg" alt="School building" fill className="object-cover brightness-75" priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
           <h1 className="text-white text-xl font-bold mb-1">JOGSOBA &apos;98</h1>
-          <h2 className="text-[#FFD700] text-4xl font-bold mb-3">GALLERY</h2>
+          <h2 className="text-purple-400 text-4xl font-bold mb-3">GALLERY</h2>
           <p className="text-white text-xs lg:text-2xl max-w-4xl mb-4">
             a platform where past students of ijebu-ode grammar school, 1998 set, reconnect, collaborate and contribute towards the development of our alma mater and the community.
           </p>
           <Button
             label="EXPLORE"
-            className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-medium px-8 rounded"
+            className="bg-purple-400 text-black font-medium px-8 rounded"
             onClick={() => console.log("Explore button clicked")}
           />
         </div>
@@ -83,7 +83,7 @@ export default function Gallery() {
         {["All", "2001", "2002", "2003"].map((year) => (
           <button
             key={year}
-            className={`px-4 py-1 rounded-t-md ${selectedYear === year ? "bg-[#FFD700] text-black" : "bg-[#4A2275]"}`}
+            className={`px-4 py-1 rounded-t-md ${selectedYear === year ? "bg-white text-black" : "bg-[#4A2275]"}`}
             onClick={() => setSelectedYear(year)}
           >
             {year}

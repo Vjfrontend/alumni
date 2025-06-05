@@ -22,7 +22,7 @@ function About() {
         <div className="lg:w-1/2 lg:order-first   bg-purple-400 lg:p-20 p-8">
           <div className="text-center lg:text-left">
             <div className="flex text-center">
-              <h2 className="text-yellow-400 font-bold text-center  text-3xl pb-3">
+              <h2 className="text-black font-bold text-center  text-3xl pb-3">
                 {" "}
                 Mission
               </h2>

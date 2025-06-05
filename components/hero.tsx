@@ -5,8 +5,8 @@ import Image from "next/image";
 
 import Link from "next/link";
 import carousel04 from "../public/images/13.jpg";
-import carousel05 from "../public/images/IMG_0189.jpg";
-import carousel07 from "@/public/images/7.jpg";
+import carousel05 from "../public/images/IMG_0770.jpg";
+import carousel07 from "@/public/images/12.jpg";
 
 const slides = [
   {
@@ -48,7 +48,7 @@ const Hero = () => {
 
   return (
     <div className="relative bg-gray-100">
-        {/* <div className="bg-purple-400 absolute w-full h-full z-10 bg-opacity-20"></div> */}
+        <div className="bg-black absolute w-full h-full z-10 bg-opacity-30"></div>
       <div className="mx-auto ">
         
         <div className="relative w-[100%] h-[80vw] pt-20 sm:h-[50vw] lg:h-[40vw]">
@@ -56,7 +56,7 @@ const Hero = () => {
           <Image
             src={slides[currentIndex].url}
             layout="fill"
-            className="object-cover"
+            className="object-cover object-top"
             alt=""
           />
           <div className="absolute bottom-0 w-full h-6 bg-gradient-to-t from-white/70 to-transparent "></div>
@@ -64,9 +64,9 @@ const Hero = () => {
 
         <div className="absolute top-1/2 transform -translate-y-1/2  flex-col sm:flex-row  lg:ml-12   ml-3 sm:items-start space-y-4 sm:space-y-0 text-white lg:mt-10  mt-7">
         <h2 className=" lg:ml-8 mt-6 ml-0 sm:text-2xl lg:text-3xl  font-regular  font-bold  sm:text-left ">
-        Jogsoga '98</h2>
+        Jogsoba '98</h2>
           <h2 className="text-xl lg:ml-8  ml-0 sm:text-4xl lg:text-6xl  font-sans  font-bold mb-4 sm:text-left ">
-              <span className="text-yellow-400">One For All .
+              <span className="text-white font-serif">One For All .
                  <br className="hidden lg:block" /> All For One </span>
             {/* <br className="hidden lg:block" />
             <span>Give Back</span> */}
@@ -77,7 +77,7 @@ const Hero = () => {
             </p>
             <div className="space-x-4 lg:ml-7 ml-0">
               <Link href="#">
-                <button className="border border-white shadow-lg bg-yellow-400 text-black hover:bg-[#030442] hover:text-white font-bold py-2 px-4 rounded-md">
+                <button className="border border-white shadow-lg bg-purple-400 text-black  hover:text-white font-bold py-2 px-4 rounded-md">
                   Read More
                 </button>
               </Link>

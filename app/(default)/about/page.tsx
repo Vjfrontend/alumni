@@ -13,8 +13,40 @@ export default function AboutPage() {
     // { name: "SANDRA RILEY", position: "TEACHER" },
     // { name: "MARIA ARNOLD", position: "TEACHER" },
   ];
+  const regimes = [
+    {
+      title: "Inaugural Regime",
+      members: [
+        { role: "President", name: "Adenuga Lekan" },
+        { role: "Vice President", name: "Ojoye Olamide" },
+        { role: "General Secretary", name: "Ajanlekoko Niyi" },
+        { role: "Social Secretary", name: "Femi Okuyelu" },
+        { role: "Financial Secretary", name: "Remi Oladipupo" },
+        { role: "Chief Whip", name: "Goke Sokoya" },
+        { role: "Admin", name: "Olalekan Ayodele" },
+        { role: "Founder", name: "Ogunmade Babafemi" },
+      ],
+    },
+    {
+      title: "2nd Regime",
+      members: [
+        { role: "President", name: "Femi Okuyelu" },
+        { role: "Vice President", name: "Adeboye Kunle" },
+        {
+          role: "General Secretary",
+          name: "Owolabi Adewale (relieved by Tope Fatubaro after relocation)",
+        },
+        { role: "Social Secretary", name: "Femi Dada" },
+        { role: "Financial Secretary", name: "Tomiwa Kuroju" },
+        { role: "Chief Whip", name: "Goke Sokoya" },
+        { role: "Admin", name: "Olalekan Ayodele" },
+        { role: "Founder", name: "Ogunmade Babafemi" },
+      ],
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen  bg-white">
       <title>about us</title>
 
       {/* Hero Section */}
@@ -30,7 +62,7 @@ export default function AboutPage() {
           <h1 className="text-white text-lg font-bold mb-1">
             JOGSOBA &apos;98
           </h1>
-          <h2 className="text-[#FFD700] text-4xl font-bold mb-3">ABOUT</h2>
+          <h2 className="text-purple-400 text-4xl font-bold mb-3">ABOUT</h2>
           <p className="text-white lg:text-2xl text-base max-w-4xl mb-4 px-4">
             We, the members of the Ijebu-Ode Grammar School Old Boys
             Association, 1998 Set — a non-profit and non-political organization
@@ -38,12 +70,14 @@ export default function AboutPage() {
             Constitution and to be governed by the provisions contained therein.
           </p>
           <Button
-            className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-medium px-8 rounded"
+            className="bg-purple-400  text-black font-medium px-8 rounded"
             label="EXPLORE"
             onClick={() => console.log("Explore button clicked")}
           />
         </div>
       </div>
+<div className="max-w-7xl mx-auto">
+
 
       {/* About Content */}
       <div className=" py-12">
@@ -119,9 +153,27 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 mx-auto">
+        {regimes.map((regime, i) => (
+          <div key={i}>
+            <h2 className="text-2xl font-bold mb-4">
+              {regime.title} Executive Members
+            </h2>
+            <div className="space-y-4">
+              {regime.members.map((member, j) => (
+                <div key={j} className="bg-gray-50 p-4 rounded shadow-sm">
+                  <p className="text-lg font-semibold">{member.role}</p>
+                  <p className="text-gray-700">{member.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <main className="min-h-screen">
         {/* Purple header */}
-        <div className="w-full h-20 bg-[#5D2D91]"></div>
+        <div className="w-full h-20 bg-purple-400"></div>
 
         {/* Content area with light gray background */}
         <div className="bg-[#f2f2f2] py-12 px-4">
@@ -129,8 +181,7 @@ export default function AboutPage() {
             {/* Section title */}
             <div className="text-center mb-12">
               <h2 className="text-xl font-bold mb-1">COMMITTEE MEMBERS</h2>
-              <div className="w-12 h-0.5 bg-black mx-auto">
-              </div>
+              <div className="w-12 h-0.5 bg-black mx-auto"></div>
             </div>
 
             {/* Members grid */}
@@ -152,6 +203,7 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
+      </div>
     </main>
   );
 }

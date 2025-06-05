@@ -54,7 +54,7 @@ export default function NewsCarousel() {
                 <h3 className="text-lg font-semibold text-gray-900">{post.title}</h3>
                 <p className="text-sm text-gray-500 mb-2">by {post.author} | {post.date}</p>
                 <p className="text-gray-600 mb-4">{post.content}</p>
-                <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <button className="bg-purple-400  text-white px-4 py-2 rounded-full text-sm font-semibold">
                   READ MORE
                 </button>
               </div>

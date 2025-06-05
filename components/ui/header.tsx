@@ -34,16 +34,16 @@ export default function Header({ className = "" }: { className?: string }): Reac
   ];
 
   return (
-    <header className={`absolute  z-30 w-full  ${className}`}>
+    <header className={`absolute  z-30 w-full  bg-purple-400  p-3 ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className=" flex h-14 items-center justify-between gap-3 rounded-2xl  before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100), before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Site branding */}
           <div className="flex flex-1 items-center justify-start">
             <Image
-              className="rounded-full"
+              className="rounded-full "
               src={oocf}
-              width={0}
-              height={40}
+              width={60}
+              height={60}
               alt="oocf"
             />
           </div>

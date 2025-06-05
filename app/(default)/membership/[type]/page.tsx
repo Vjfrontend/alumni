@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full">
+      <section className="relative h-[400px] sm:h-[250px] md:h-[500px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/14.jpg"
@@ -54,13 +54,13 @@ export default function Home() {
           />
         </div>
         <div className="relative z-10 flex h-full flex-col justify-center p-4 sm:p-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-8 text-yellow-400 tracking-wide">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-8 text-purple-400 tracking-wide">
             membership portal
           </h1>
           <div className="mt-4">
             <Link
               href="/login"
-              className="inline-flex items-center justify-center rounded-full bg-red-500 px-4 sm:px-6 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-full bg-purple-400 px-4 sm:px-6 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
             >
               <span className="text-lg font-semibold">Join Now</span>
             </Link>
@@ -105,7 +105,7 @@ export default function Home() {
                     key={page}
                     onClick={() => setCurrentPage(page)}
                     className={`h-2 w-2 rounded-full ${
-                      currentPage === page ? "bg-pink-500" : "bg-gray-300"
+                      currentPage === page ? "bg-purple-400" : "bg-gray-300"
                     } hover:bg-gray-400 focus:outline-none`}
                     aria-label={`Page ${page + 1}`}
                   ></button>
@@ -146,7 +146,7 @@ function MemberCard({ data, link }: MemberCardProps) {
         <p className="text-gray-700 mb-4 flex-grow">{data.description}</p>
         <Link
           href={link}
-          className="inline-flex items-center justify-center rounded-full bg-pink-500 px-6 py-2 text-sm font-medium text-white hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 self-start"
+          className="inline-flex items-center justify-center rounded-full bg-purple-400 px-6 py-2 text-sm font-medium text-white hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 self-start"
         >
           {data.button}
         </Link>

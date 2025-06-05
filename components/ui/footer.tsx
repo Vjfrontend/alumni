@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-purple-800 text-white">
+    <footer className="bg-purple-400 text-white">
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo and Description */}
         <div className="space-y-4">
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-yellow-500 text-center py-4 text-xs">
+      <div className="bg-black text-center py-4 text-xs">
         Copyright © 2024 All Rights Reserved
       </div>
     </footer>

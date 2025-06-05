@@ -39,7 +39,7 @@ export default function Home() {
           <h1 className="text-white text-xl  font-bold  mb-1">
             JOGSOBA &apos;98
           </h1>
-          <h2 className="text-[#FFD700] text-4xl font-bold mb-3">Blog</h2>
+          <h2 className="text-purple-400 text-4xl font-bold mb-3">Blog</h2>
           <p className="text-white text-xs lg:text-2xl max-w-4xl mb-4">
             a platform where past studnt of ijebu-ode grammer school,1998 set
             ,reconnect,collaborate and contribute towards the developmentof our
@@ -47,7 +47,7 @@ export default function Home() {
           </p>
           <Button
             label="EXPLORE"
-            className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-medium px-8 rounded"
+            className="bg-purple-400  text-black font-medium px-8 rounded"
             onClick={() => console.log("Explore button clicked")}
           />
         </div>
