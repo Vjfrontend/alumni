@@ -48,7 +48,7 @@ const Hero = () => {
 
   return (
     <div className="relative bg-gray-100">
-        <div className="bg-black absolute w-full h-full z-10 bg-opacity-30"></div>
+        {/* <div className="bg-black absolute w-full h-full z-10 bg-opacity-30"></div> */}
       <div className="mx-auto ">
         
         <div className="relative w-[100%] h-[80vw] pt-20 sm:h-[50vw] lg:h-[40vw]">
@@ -76,7 +76,7 @@ const Hero = () => {
               A platfrom where past student of ijebu-ode grammer school ,1998 set ,reconnects ,collaborate ,and contribute towards the development of our alma mater and the community
             </p>
             <div className="space-x-4 lg:ml-7 ml-0">
-              <Link href="#">
+              <Link href="/about">
                 <button className="border border-white shadow-lg bg-purple-400 text-black  hover:text-white font-bold py-2 px-4 rounded-md">
                   Read More
                 </button>

@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md" id='contact'>
       <h2 className="text-lg font-medium mb-6">SEND MESSAGE</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-2 gap-4">

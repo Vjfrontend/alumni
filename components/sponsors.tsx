@@ -24,7 +24,7 @@ const posts = [
 
 export default function NewsCarousel() {
   return (
-    <section className="p-16 bg-gray-50 text-center relative">
+    <section className="p-16 bg-gray-50 z-10 text-center relative">
       <h2 className="text-3xl font-bold text-gray-800 mb-6">Recent Update</h2>
       <div className="flex justify-center mb-6">
         <span className="w-16 h-1 bg-gray-400 inline-block rounded"></span>

@@ -29,7 +29,7 @@ export default function BackToTopButton() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg transition"
+          className="fixed bottom-6 z-30 right-6 bg-black text-white p-3 rounded-full shadow-lg transition"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

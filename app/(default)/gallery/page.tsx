@@ -70,11 +70,11 @@ export default function Gallery() {
           <p className="text-white text-xs lg:text-2xl max-w-4xl mb-4">
             a platform where past students of ijebu-ode grammar school, 1998 set, reconnect, collaborate and contribute towards the development of our alma mater and the community.
           </p>
-          <Button
+          {/* <Button
             label="EXPLORE"
             className="bg-purple-400 text-black font-medium px-8 rounded"
             onClick={() => console.log("Explore button clicked")}
-          />
+          /> */}
         </div>
       </div>
 

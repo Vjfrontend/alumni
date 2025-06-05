@@ -4,6 +4,7 @@ import Image from 'next/image';
 import GoogleMap from '@/components/GoogleMap';
 import ContactForm from '@/components/ContactForm';
 import Button from '@/components/ui/button'; // Adjust the path based on your project structure
+import Link from 'next/link';
 
 const Contact = () => {
   return (
@@ -19,11 +20,14 @@ const Contact = () => {
               A prestigious alumni group of students of IGBOBI OKE GRAMMAR SCHOOL, founded on the premise of giving back
               to the society towards the advancement of our alma mater and the community at large.
             </p>
+            <Link href="#contact">
+           
             <Button 
-              className="bg-purple-400 hover:bg-[#E6C200] text-black font-medium px-8 rounded" 
-              label="EXPLORE" 
+              className="bg-purple-400 text-black font-medium px-8 rounded" 
+              label="CONTACT" 
               onClick={() => console.log('Explore button clicked')} 
             />
+             </Link>
           </div>
         </div>
     <div className="flex flex-col md:flex-row justify-center items-center mt-28 max-w-7xl mx-auto bg-white ">

@@ -15,7 +15,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-sm">
-            A platform where past students of LIBII-OBE GRAMMAR SCHOOL 1996 set, reconnect, collaborate, and contribute
+            A platform where past students of ijebu-ode  GRAMMAR SCHOOL 1996 set, reconnect, collaborate, and contribute
             towards the development of our alma mater and the community.
           </p>
         </div>

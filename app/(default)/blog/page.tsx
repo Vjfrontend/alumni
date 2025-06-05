@@ -45,11 +45,11 @@ export default function Home() {
             ,reconnect,collaborate and contribute towards the developmentof our
             alma mateer and the community.
           </p>
-          <Button
+          {/* <Button
             label="EXPLORE"
             className="bg-purple-400  text-black font-medium px-8 rounded"
             onClick={() => console.log("Explore button clicked")}
-          />
+          /> */}
         </div>
       </div>
       <div className="max-w-7xl mx-auto my-16">

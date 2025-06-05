@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AboutPage() {
   const members = [
@@ -69,11 +70,14 @@ export default function AboutPage() {
             — do hereby firmly and solemnly resolve to establish for ourselves a
             Constitution and to be governed by the provisions contained therein.
           </p>
-          <Button
-            className="bg-purple-400  text-black font-medium px-8 rounded"
-            label="EXPLORE"
-            onClick={() => console.log("Explore button clicked")}
-          />
+         <Link href="/signup">
+               <Button 
+              className="bg-purple-400 text-black font-medium px-8 rounded" 
+              label="EXPLORE" 
+              onClick={() => console.log('Explore button clicked')} 
+            />
+              </Link>
+            
         </div>
       </div>
 <div className="max-w-7xl mx-auto">
