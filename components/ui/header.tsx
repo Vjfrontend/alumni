@@ -39,6 +39,10 @@ export default function Header({ className = "" }: { className?: string }): Reac
         <div className=" flex h-14 items-center justify-between gap-3 rounded-2xl  before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100), before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Site branding */}
           <div className="flex flex-1 items-center justify-start">
+             <Link
+                  className="font-medium text-sm text-[#fafafa] border-b-2 border-transparent   hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  mx-4 lg:mx-5"
+                  href="/"
+                >
             <Image
               className="rounded-full "
               src={oocf}
@@ -46,6 +50,7 @@ export default function Header({ className = "" }: { className?: string }): Reac
               height={60}
               alt="oocf"
             />
+            </Link>
           </div>
 
           {/* Desktop navigation */}
