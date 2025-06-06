@@ -40,8 +40,13 @@ export default function MobileMenu() {
     { label: "JOIN NOW", href: "/signup" },
     { label: "Members", href: "/membership/new" },
     { label: "OLD BOYS DATA", href: "/login" },
-    { label: "Payment", href: "/payment" },
     { label: "Be on a committee", href: "/signup" },
+  ];
+ const membershipItems1 = [
+    { label: "Leadership", href: "/leadership" },
+    { label: "History of Ijebu ode Grammar school", href: "/history" },
+    { label: "History Of Jogsoba’98", href: "/about" },
+    { label: "Secreteriat", href: "/constitution" },
   ];
 
   return (
@@ -111,22 +116,22 @@ export default function MobileMenu() {
                 Home
               </Link>
             </li>
+             <li
+                className="flex rounded-lg px-2  py-1.5 text-gray-700 pointer-events-auto"
+              >
+                <DropdownMenu
+                  title="About us"
+                  items={membershipItems1}
+                  className=""
+                />
+              </li>
             <li>
               <Link
-                href="/about"
+                href="/payment"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Blog
+                Payment
               </Link>
             </li>
             <li>
@@ -144,7 +149,7 @@ export default function MobileMenu() {
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 pointer-events-auto"
                 onClick={() => setMobileNavOpen(false)}
               >
-                Gallery
+                Events
               </Link>
             </li>
             <li className="flex  rounded-lg   text-gray-700 pointer-events-auto">

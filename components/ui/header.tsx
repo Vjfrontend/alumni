@@ -29,8 +29,13 @@ export default function Header({ className = "" }: { className?: string }): Reac
     { label: "JOIN NOW", href: "/signup" },
     { label: "Members", href: "/membership/new" },
     { label: "OLD BOYS DATA", href: "/login" },
-    { label: "Payment", href: "/payment" },
     { label: "Be on a committee", href: "/signup" },
+  ];
+const membershipItems1 = [
+    { label: "Leadership", href: "/leadership" },
+    { label: "History of Ijebu ode Grammar school", href: "/history" },
+    { label: "History Of Jogsoba’98", href: "/about" },
+    { label: "Secreteriat", href: "constitution" },
   ];
 
   return (
@@ -59,27 +64,27 @@ export default function Header({ className = "" }: { className?: string }): Reac
             <ul className="flex grow justify-center flex-wrap items-center">
               <li>
                 <Link
-                  className="font-medium text-sm text-[#fafafa] border-b-2 border-transparent  hover:border-b-[#030442] hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  mx-4 lg:mx-5"
+                  className="font-medium text-sm text-[#fafafa] border-b-2 border-transparent  hover:border-b-[#030442] hover:-translate-y-1 transition-transform duration-300  rounded-md  mx-4 lg:mx-5"
                   href="/"
                 >
                   Home
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent rounded-md hover:border-b-[#030442] px-2  mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="/about"
-                >
-                  About us
-                </Link>
+              
+                 <li className="font-medium mt-1 text-sm text-[#fafafa] border-b-2 border-transparent  hover:-translate-y-1 transition-transform duration-300  rounded-md px-2  ">
+                <DropdownMenu
+                  title="About us"
+                  items={membershipItems1}
+                  className="text-[#fafafafa]"
+                />
               </li>
 
               <li>
                 <Link
                   className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="/blog"
+                  href="/payment"
                 >
-                  Blog
+                  Payment
                 </Link>
               </li>
               <li>
@@ -96,7 +101,7 @@ export default function Header({ className = "" }: { className?: string }): Reac
                   className="font-medium text-sm text-[#fafafafa] border-b-2 border-transparent px-2  rounded-md hover:border-b-[#030442] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="/gallery"
                 >
-                  Gallery
+                  Events
                 </Link>
               </li>
 
