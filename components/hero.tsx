@@ -90,7 +90,7 @@ export default function HeroCarousel() {
     <section className="w-full min-h-screen mt-5 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center px-4 md:px-8 py-12">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Text */}
-        <div className="text-white space-y-6 text-center  lg:text-left">
+        <div className="text-white space-y-6 text-center  mt-3 lg:text-left">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Jogsoba '98
           </h1>

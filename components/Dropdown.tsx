@@ -53,7 +53,7 @@ export default function DropdownMenu({
   };
 
   return (
-    <div className={cn("relative mx-4", className)} ref={dropdownRef}>
+    <div className={cn("relative lg:mx-4 -mx-3", className)} ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
         className={cn(
