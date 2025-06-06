@@ -87,10 +87,10 @@ export default function HeroCarousel() {
   }
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-br from-gray-900 to-black flex items-center justify-center px-4 md:px-8 py-12">
+    <section className="w-full min-h-screen mt-5 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center px-4 md:px-8 py-12">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Text */}
-        <div className="text-white space-y-6 text-center lg:text-left">
+        <div className="text-white space-y-6 text-center  lg:text-left">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Jogsoba '98
           </h1>
@@ -105,16 +105,16 @@ export default function HeroCarousel() {
 
         {/* Right Side */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 relative">
-          {/* 3D Animated Title Block */}
-          <div
-            key={currentIndex}
-            className="hidden lg:block animate-[pop3d_1s_ease-out] transform-style-preserve-3d"
-          >
-            <div className="relative px-6 py-4 bg-gradient-to-br from-purple-600 to-indigo-600 text-white text-2xl font-bold shadow-2xl rounded-xl transform rotate-x-6 rotate-y-[-8deg] scale-[1.02]">
-              <div className="absolute -inset-1 flex bg-indigo-500 blur-2xl opacity-30 rounded-xl -z-10"></div>
-              {carouselItems[currentIndex].title}
-            </div>
-          </div>
+        <div
+  key={currentIndex}
+  className="animate-[pop3d_1s_ease-out] transform-style-preserve-3d"
+>
+  <div className="relative px-6 py-4 bg-gradient-to-br from-purple-600 to-indigo-600 text-white text-2xl font-bold shadow-2xl rounded-xl transform rotate-x-6 rotate-y-[-8deg] scale-[1.02]">
+    <div className="absolute -inset-1 flex bg-indigo-500 blur-2xl opacity-30 rounded-xl -z-10"></div>
+    {carouselItems[currentIndex].title}
+  </div>
+</div>
+
 
           {/* Cube Carousel */}
           <div
