@@ -14,7 +14,7 @@ interface Member {
 }
 
 const dashboardNavigation = [
-  { name: "Dashboard", href: "/dashboard", icon: Home },
+  { name: "Dashboard", href: "/dashboard", icon: Home  },
   { name: "My Profile", href: "/dashboard/profile", icon: User },
   { name: "Payments & Dues", href: "/dashboard/donation", icon: CreditCard },
   { name: "Membership Status", href: "/dashboard/membership-status", icon: Users },
@@ -97,7 +97,7 @@ export default function DashboardLayout({
 
   return (
 
-  <div className=" flex flex-col lg:flex-row bg-gray-50">
+  <div className=" min-h-screen flex flex-col lg:flex-row bg-gray-50 overflow-visible">
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-gray-600 bg-opacity-75 z-40 lg:hidden"
@@ -105,11 +105,12 @@ export default function DashboardLayout({
         />
       )}
 
-      <div
-        className={`absolute inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0 ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
+     <div
+  className={`${
+    sidebarOpen ? "translate-x-0" : "-translate-x-full"
+  } fixed top-0 bottom-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}
+>
+
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-purple-400">
           <h1 className="text-xl font-bold text-white">JOGSOBA '98</h1>
           <button
@@ -148,7 +149,7 @@ export default function DashboardLayout({
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => setSidebarOpen(false)}
+  onClick={() => setSidebarOpen(false)} // GOOD!
                 className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors ${
                   isActive
                     ? "bg-green-100 text-purple-900 border-r-4 border-purple-600"
