@@ -284,8 +284,8 @@ export default function Login() {
           </div>
 
           {/* Social login */}
-          <div className="flex items-center space-x-2">
-            <button
+          <div className="flex justify-center items-center ">
+            {/* <button
               type="button"
               onClick={handleGoogleLogin}
               className="btn text-zinc-600 bg-white hover:text-zinc-900 shadow group relative flex items-center px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#7B3F9D]"
@@ -300,7 +300,7 @@ export default function Login() {
                 </svg>
               </div>
               <span className="pl-3">Continue With Google</span>
-            </button>
+            </button> */}
             <h2>
               <Link className="text-sm font-medium text-zinc-500 underline hover:no-underline" href="/signup">
                 Sign up

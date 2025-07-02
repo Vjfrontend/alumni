@@ -1,7 +1,9 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -16,6 +18,8 @@ export default function Signup() {
     confirmPassword: "",
   })
 
+  const [profileImage, setProfileImage] = useState<File | null>(null)
+  const [imagePreview, setImagePreview] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState(false)
@@ -85,39 +89,44 @@ export default function Signup() {
     console.log("Google signup clicked")
   }
 
-  if (success) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">
-              JOGSOBA '98
-            </h1>
-            <p className="text-lg text-gray-600">ASSOCIATION MEMBERSHIP PORTAL</p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-xl border border-green-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h2 className="text-2xl font-bold text-green-800 mb-2">Registration Successful!</h2>
-              <p className="text-green-600 mb-6">
-                Your account has been created successfully. You can now log in to access the membership portal.
-              </p>
-              <Link
-                href="/login"
-                className="w-full block bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-purple-800 transform hover:scale-105 transition-all duration-200 shadow-lg text-center"
-              >
-                Go to Login
-              </Link>
+  const router = useRouter()
+
+  useEffect(() => {
+    if (success) {
+      const timeout = setTimeout(() => {
+        router.push("/login")
+      }, 3000) // Redirect after 3 seconds
+      return () => clearTimeout(timeout)
+    }
+  }, [success, router])
+  if (success)
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 flex items-center justify-center p-4">
+      <div className="max-w-md w-full">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">
+            JOGSOBA '98
+          </h1>
+          <p className="text-lg text-gray-600">ASSOCIATION MEMBERSHIP PORTAL</p>
+        </div>
+        <div className="bg-white p-8 rounded-2xl shadow-xl border border-purple-100">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
             </div>
+            <h2 className="text-2xl font-bold text-purple-800 mb-2">Registration Successful!</h2>
+            <p className="text-purple-600 mb-6">
+              Your account has been created successfully. Redirecting you to the login page...
+            </p>
+          
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 py-8 px-4">
@@ -139,6 +148,41 @@ export default function Signup() {
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-purple-200 to-purple-300 rounded-full opacity-20"></div>
 
           <form className="relative z-10" onSubmit={handleSubmit}>
+             <div className="text-center my-3">
+                {imagePreview ? (
+                  <Image
+                    src={imagePreview}
+                    alt="Profile Preview"
+                    width={100}
+                    height={100}
+                    className="mx-auto mb-4 rounded-full object-cover shadow-md"
+                  />
+                ) : (
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center text-purple-400">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 4v4m0 0v4m0-4H8m4 0h4M5 20h14a2 2 0 002-2V7a2 2 0 00-2-2h-4l-2-2H9L7 5H5a2 2 0 00-2 2v11a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                )}
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0]
+                    if (file) {
+                      setProfileImage(file)
+                      setImagePreview(URL.createObjectURL(file))
+                    }
+                  }}
+                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100 mx-auto"
+                />
+              </div>
+
             <div className="space-y-4">
               {/* Name Fields */}
               <div className="grid grid-cols-2 gap-4">
@@ -379,7 +423,7 @@ export default function Signup() {
           </div>
 
           {/* Social login */}
-          <button
+          {/* <button
             type="button"
             onClick={handleGoogleSignup}
             className="btn text-gray-600 bg-white hover:text-gray-900 w-full shadow group relative flex after:flex-1 border border-gray-200 py-3 px-6 rounded-lg font-medium"
@@ -394,7 +438,7 @@ export default function Signup() {
               </svg>
             </div>
             <span className="flex-auto pl-3">Continue With Google</span>
-          </button>
+          </button> */}
 
           <div className="text-center mt-6">
             <div className="text-xs text-gray-500">
