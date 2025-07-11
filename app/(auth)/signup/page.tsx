@@ -92,7 +92,7 @@ export default function Signup() {
       YearJoined,
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/signup`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_LOCAL}/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -103,7 +103,7 @@ export default function Signup() {
     if (!response.ok) throw new Error(data.message || "Signup failed")
 
 // Save to localStorage
-localStorage.setItem("authToken", data.result.token);
+localStorage.setItem("authToken", data.data.token);
 localStorage.setItem("userData", JSON.stringify(data.result.user));
 setSuccess(true)
   } catch (err) {
