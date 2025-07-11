@@ -81,21 +81,25 @@ export default function Signup() {
       YearJoined,
     } = formData
 
-    const payload = {
-      firstName,
-      lastName,
-      phoneNumber,
-      email,
-      password,
-      AdmissionYear,
-      graduationYear,
-      YearJoined,
+    // Create FormData for multipart/form-data upload
+    const formDataToSend = new FormData()
+    formDataToSend.append('firstName', firstName)
+    formDataToSend.append('lastName', lastName)
+    formDataToSend.append('phoneNumber', phoneNumber)
+    formDataToSend.append('email', email)
+    formDataToSend.append('password', password)
+    formDataToSend.append('AdmissionYear', AdmissionYear)
+    formDataToSend.append('graduationYear', graduationYear)
+    formDataToSend.append('YearJoined', YearJoined)
+    
+    // Add image if selected
+    if (profileImage) {
+      formDataToSend.append('image', profileImage)
     }
 
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_LOCAL}/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      body: formDataToSend, // Send as FormData instead of JSON
     })
 
     const data = await response.json()

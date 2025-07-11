@@ -75,12 +75,34 @@ export default function ProfilePage() {
       <div className="bg-gray-50 border-2 border-gray-300 rounded p-4 sm:p-6 lg:p-8">
         <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-10 mb-8">
           <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 border-4 border-gray-400 rounded-full bg-white flex items-center justify-center shadow-inner mx-auto lg:mx-0 flex-shrink-0">
-            <div className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gray-200 rounded-full border-2 border-gray-300 flex items-center justify-center text-2xl font-bold text-gray-600">
-              {profile.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
-            </div>
+            {(() => {
+              try {
+                const userData = localStorage.getItem("userData")
+                if (userData) {
+                  const user = JSON.parse(userData)
+                  if (user.image && user.image.url) {
+                    return (
+                      <img
+                        src={user.image.url}
+                        alt={`${profile.name} profile`}
+                        className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-2 border-gray-300"
+                      />
+                    )
+                  }
+                }
+              } catch (error) {
+                console.error("Error loading profile image:", error)
+              }
+              
+              return (
+                <div className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gray-200 rounded-full border-2 border-gray-300 flex items-center justify-center text-2xl font-bold text-gray-600">
+                  {profile.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </div>
+              )
+            })()}
           </div>
 
           <div className="flex-1 w-full">

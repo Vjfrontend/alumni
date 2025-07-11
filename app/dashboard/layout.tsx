@@ -257,15 +257,37 @@ export default function DashboardLayout({
         {/* Member Info */}
         <div className="p-4 border-b border-gray-200 bg-purple-50">
           <div className="flex items-center">
-            <div className="h-10 w-10 rounded-full bg-[#7B3F9D] flex items-center justify-center">
-              <span className="text-white font-medium text-sm">
-                {member.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")
-                  .toUpperCase()}
-              </span>
-            </div>
+            {(() => {
+              try {
+                const userData = localStorage.getItem("userData")
+                if (userData) {
+                  const user = JSON.parse(userData)
+                  if (user.image && user.image.url) {
+                    return (
+                      <img
+                        src={user.image.url}
+                        alt={`${member.name} profile`}
+                        className="h-10 w-10 rounded-full object-cover border-2 border-[#7B3F9D]"
+                      />
+                    )
+                  }
+                }
+              } catch (error) {
+                console.error("Error loading profile image:", error)
+              }
+              
+              return (
+                <div className="h-10 w-10 rounded-full bg-[#7B3F9D] flex items-center justify-center">
+                  <span className="text-white font-medium text-sm">
+                    {member.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")
+                      .toUpperCase()}
+                  </span>
+                </div>
+              )
+            })()}
             <div className="ml-3">
               <p className="text-sm font-medium text-gray-900">{member.name}</p>
               <p className="text-xs text-gray-500">ID: {member.membershipId}</p>
