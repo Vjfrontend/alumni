@@ -47,11 +47,7 @@ export default function Signup() {
       setError("Password must be at least 8 characters long")
       return false
     }
-    const phoneRegex = /^(\+234|0)[789][01]\d{8}$/
-    if (!phoneRegex.test(formData.phoneNumber)) {
-      setError("Please enter a valid Nigerian phone number")
-      return false
-    }
+    // Removed phone number validation
     const currentYear = new Date().getFullYear()
     if (
       parseInt(formData.AdmissionYear) > currentYear ||
@@ -107,7 +103,7 @@ export default function Signup() {
     if (!response.ok) throw new Error(data.message || "Signup failed")
 
 // Save to localStorage
-localStorage.setItem("authToken", data.result.data.token);
+localStorage.setItem("authToken", data.result.token);
 localStorage.setItem("userData", JSON.stringify(data.result.user));
 setSuccess(true)
   } catch (err) {
@@ -128,7 +124,7 @@ setSuccess(true)
   useEffect(() => {
     if (success) {
       const timeout = setTimeout(() => {
-        router.push("/login")
+        router.push("/dashboard")
       }, 3000) // Redirect after 3 seconds
       return () => clearTimeout(timeout)
     }
@@ -290,32 +286,32 @@ setSuccess(true)
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="admissionYear">
-                    Admission Year *
+                    Admission Date *
                   </label>
                   <input
                     id="admissionYear"
-                    name="admissionYear"
+                    name="AdmissionYear"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                    type="number"
+                    type="date"
                     value={formData.AdmissionYear}
                     onChange={handleChange}
                     required
-                    placeholder="e.g. 1998"
+                    placeholder="Select admission date"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="graduationYear">
-                    Graduation Year *
+                    Graduation Date *
                   </label>
                   <input
                     id="graduationYear"
                     name="graduationYear"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                    type="number"
+                    type="date"
                     value={formData.graduationYear}
                     onChange={handleChange}
                     required
-                    placeholder="e.g. 2004"
+                    placeholder="Select graduation date"
                   />
                 </div>
               </div>
@@ -323,17 +319,17 @@ setSuccess(true)
               {/* Year Joined Association */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="yearJoined">
-                  Year Joined Association *
+                  Date Joined Association *
                 </label>
                 <input
                   id="yearJoined"
-                  name="yearJoined"
+                  name="YearJoined"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                  type="number"
+                  type="date"
                   value={formData.YearJoined}
                   onChange={handleChange}
                   required
-                  placeholder="e.g. 2024"
+                  placeholder="Select date joined"
                 />
               </div>
 
