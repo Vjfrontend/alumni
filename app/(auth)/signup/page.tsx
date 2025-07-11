@@ -97,7 +97,7 @@ export default function Signup() {
       formDataToSend.append('image', profileImage)
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_LOCAL}/auth/signup`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/signup`, {
       method: "POST",
       body: formDataToSend, // Send as FormData instead of JSON
     })
