@@ -1,7 +1,20 @@
+"use client"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Calendar, CreditCard, Users, TrendingUp, Bell, CheckCircle } from "lucide-react"
 import Link from "next/link"
 
 export default function DashboardHome() {
+  const router = useRouter()
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("authToken")
+      if (!token) {
+        router.replace("/login")
+      }
+    }
+  }, [router])
+
   return (
     <div>
       {/* Welcome Header */}

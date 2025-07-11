@@ -36,7 +36,7 @@ export default function Login() {
   }
 
   const realLogin = async () => {
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL_LOCAL
 
     if (!backendUrl) {
       throw new Error("Backend URL not configured. Set NEXT_PUBLIC_API_URL in your .env file.")
@@ -88,8 +88,13 @@ export default function Login() {
 
     try {
       const result = await realLogin()
-      if (result.token) {
-        localStorage.setItem("authToken", result.token)
+      if (result.data.token) {
+        // Store token for authentication
+        localStorage.setItem("authToken", result.data.token)
+      } else {
+        setError("No token received from server. Please contact support.")
+        setIsLoading(false)
+        return
       }
 
       setSuccess(true)
