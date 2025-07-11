@@ -36,7 +36,7 @@ export default function Login() {
   }
 
   const realLogin = async () => {
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL_LOCAL
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL
 
     if (!backendUrl) {
       throw new Error("Backend URL not configured. Set NEXT_PUBLIC_API_URL in your .env file.")
