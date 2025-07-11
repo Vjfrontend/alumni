@@ -104,7 +104,7 @@ export default function Signup() {
 
 // Save to localStorage
 localStorage.setItem("authToken", data.data.token);
-localStorage.setItem("userData", JSON.stringify(data.result.user));
+localStorage.setItem("userData", JSON.stringify(data.data.user));
 setSuccess(true)
   } catch (err) {
     setError(err instanceof Error ? err.message : "An unexpected error occurred")
