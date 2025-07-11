@@ -1,27 +1,64 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function ProfilePage() {
   const [profile, setProfile] = useState({
-    name: "Joshua Davids Praise",
-    email: "member@jogsoba98.com",
-    phone: "08021212312123",
-    yearJoinedSchool: "1992",
-    yearJoinedAssociation: "2020",
-    yearOfGraduation: "1998",
+    name: "",
+    email: "",
+    phone: "",
+    yearJoinedSchool: "",
+    yearJoinedAssociation: "",
+    yearOfGraduation: "",
     address: "",
     occupation: "",
     company: "",
   })
 
   const [isEditing, setIsEditing] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState("")
+
+ useEffect(() => {
+  try {
+    const storedUser = localStorage.getItem("userData");
+
+    if (!storedUser) {
+      setError("No user data found. Please log in again.");
+      setLoading(false);
+      return;
+    }
+
+    const user = JSON.parse(storedUser);
+
+    setProfile({
+      name: `${user.firstName} ${user.lastName}`,
+      email: user.email || "",
+      phone: user.phoneNumber || "",
+      yearJoinedSchool: user.AdmissionYear || "",
+      yearJoinedAssociation: new Date(user.YearJoined).getFullYear().toString(),
+      yearOfGraduation: user.graduationYear || "",
+      address: "",
+      occupation: "",
+      company: "",
+    });
+
+  } catch (err) {
+    setError("Error loading profile. Please try again.");
+    console.error("Profile load error:", err);
+  } finally {
+    setLoading(false);
+  }
+}, []);
+
 
   const handleSave = () => {
-    // Save profile logic here
+    // You can also update localStorage here if you want
     setIsEditing(false)
-    // You would typically make an API call here
   }
+
+  if (loading) return <p className="p-4 text-center">Loading...</p>
+  if (error) return <p className="p-4 text-red-600 text-center">{error}</p>
 
   return (
     <div className="p-4 sm:p-6 lg:p-8">
@@ -48,89 +85,35 @@ export default function ProfilePage() {
 
           <div className="flex-1 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-bold text-gray-800 mb-2">Full Name</label>
-                {isEditing ? (
-                  <input
-                    type="text"
-                    value={profile.name}
-                    onChange={(e) => setProfile({ ...profile, name: e.target.value })}
-                    className="w-full p-3 border-2 border-gray-300 rounded"
-                  />
-                ) : (
-                  <p className="p-3 bg-white border-2 border-gray-300 rounded">{profile.name}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-800 mb-2">Email</label>
-                {isEditing ? (
-                  <input
-                    type="email"
-                    value={profile.email}
-                    onChange={(e) => setProfile({ ...profile, email: e.target.value })}
-                    className="w-full p-3 border-2 border-gray-300 rounded"
-                  />
-                ) : (
-                  <p className="p-3 bg-white border-2 border-gray-300 rounded">{profile.email}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-800 mb-2">Phone Number</label>
-                {isEditing ? (
-                  <input
-                    type="tel"
-                    value={profile.phone}
-                    onChange={(e) => setProfile({ ...profile, phone: e.target.value })}
-                    className="w-full p-3 border-2 border-gray-300 rounded"
-                  />
-                ) : (
-                  <p className="p-3 bg-white border-2 border-gray-300 rounded">{profile.phone}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-800 mb-2">Year Joined School</label>
-                {isEditing ? (
-                  <input
-                    type="text"
-                    value={profile.yearJoinedSchool}
-                    onChange={(e) => setProfile({ ...profile, yearJoinedSchool: e.target.value })}
-                    className="w-full p-3 border-2 border-gray-300 rounded"
-                  />
-                ) : (
-                  <p className="p-3 bg-white border-2 border-gray-300 rounded">{profile.yearJoinedSchool}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-800 mb-2">Year Joined Association</label>
-                {isEditing ? (
-                  <input
-                    type="text"
-                    value={profile.yearJoinedAssociation}
-                    onChange={(e) => setProfile({ ...profile, yearJoinedAssociation: e.target.value })}
-                    className="w-full p-3 border-2 border-gray-300 rounded"
-                  />
-                ) : (
-                  <p className="p-3 bg-white border-2 border-gray-300 rounded">{profile.yearJoinedAssociation}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-800 mb-2">Year of Graduation</label>
-                {isEditing ? (
-                  <input
-                    type="text"
-                    value={profile.yearOfGraduation}
-                    onChange={(e) => setProfile({ ...profile, yearOfGraduation: e.target.value })}
-                    className="w-full p-3 border-2 border-gray-300 rounded"
-                  />
-                ) : (
-                  <p className="p-3 bg-white border-2 border-gray-300 rounded">{profile.yearOfGraduation}</p>
-                )}
-              </div>
+              {[
+                { label: "Full Name", key: "name" },
+                { label: "Email", key: "email" },
+                { label: "Phone Number", key: "phone" },
+                { label: "Year Joined School", key: "yearJoinedSchool" },
+                { label: "Year Joined Association", key: "yearJoinedAssociation" },
+                { label: "Year of Graduation", key: "yearOfGraduation" },
+              ].map((field) => (
+                <div key={field.key}>
+                  <label className="block text-sm font-bold text-gray-800 mb-2">{field.label}</label>
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      value={(profile as any)[field.key]}
+                      onChange={(e) =>
+                        setProfile((prev) => ({
+                          ...prev,
+                          [field.key]: e.target.value,
+                        }))
+                      }
+                      className="w-full p-3 border-2 border-gray-300 rounded"
+                    />
+                  ) : (
+                    <p className="p-3 bg-white border-2 border-gray-300 rounded">
+                      {(profile as any)[field.key]}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
 
             {isEditing && (
@@ -143,6 +126,19 @@ export default function ProfilePage() {
                 </button>
               </div>
             )}
+
+            <div className="mt-8">
+              <button
+                className="bg-red-600 text-white px-4 py-2 rounded"
+                onClick={() => {
+                  localStorage.removeItem("authToken")
+                  localStorage.removeItem("userData")
+                  window.location.href = "/login"
+                }}
+              >
+                Log Out
+              </button>
+            </div>
           </div>
         </div>
       </div>

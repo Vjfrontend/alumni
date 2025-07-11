@@ -9,6 +9,11 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
+
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev)
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -90,7 +95,9 @@ export default function Login() {
       const result = await realLogin()
       if (result.data.token) {
         // Store token for authentication
-        localStorage.setItem("authToken", result.data.token)
+        localStorage.setItem("authToken", result.data.token);
+localStorage.setItem("userData", JSON.stringify(result.data.user));
+
       } else {
         setError("No token received from server. Please contact support.")
         setIsLoading(false)
@@ -202,28 +209,35 @@ export default function Login() {
                   required
                 />
               </div>
-              <div>
-                <div className="flex justify-between">
-                  <label className="block text-sm text-zinc-800 font-medium mb-2" htmlFor="password">
-                    Password *
-                  </label>
-                  <Link
-                    className="text-sm font-medium text-zinc-500 underline hover:no-underline ml-2"
-                    href="/reset-password"
-                  >
-                    Forgot?
-                  </Link>
-                </div>
-                <input
-                  id="password"
-                  name="password"
-                  className="w-full px-3 py-2 border border-zinc-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#7B3F9D] focus:border-transparent"
-                  type="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+               <div>
+            <div className="flex justify-between">
+              <label className="block text-sm text-zinc-800 font-medium mb-2" htmlFor="password">
+                Password *
+              </label>
+              <Link href="/reset-password" className="text-sm font-medium text-zinc-500 underline hover:no-underline ml-2">
+                Forgot?
+              </Link>
+            </div>
+
+            <div className="relative">
+              <input
+                id="password"
+                name="password"
+                type={showPassword ? "text" : "password"}
+                className="w-full px-3 py-2 border border-zinc-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#7B3F9D] focus:border-transparent"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+              <button
+                type="button"
+                onClick={togglePassword}
+                className="absolute top-1/2 right-3 transform -translate-y-1/2 text-lg cursor-pointer"
+              >
+                {showPassword ? "🙈" : "👁️"}
+              </button>
+            </div>
+          </div>
             </div>
 
             {/* Error Message */}

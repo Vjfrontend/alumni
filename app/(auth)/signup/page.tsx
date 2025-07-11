@@ -10,13 +10,22 @@ export default function Signup() {
     firstName: "",
     lastName: "",
     phoneNumber: "",
-    admissionYear: "",
+    AdmissionYear: "",
     graduationYear: "",
-    yearJoined: "",
+    YearJoined: "",
     email: "",
     password: "",
     confirmPassword: "",
   })
+
+  // Add handleChange function
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
 
   const [profileImage, setProfileImage] = useState<File | null>(null)
   const [imagePreview, setImagePreview] = useState<string | null>(null)
@@ -26,15 +35,8 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-    // Clear error when user starts typing
-    if (error) setError("")
-  }
+// Removed top-level await fetch logic; form submission is handled in handleSubmit.
+
 
   const validateForm = () => {
     if (formData.password !== formData.confirmPassword) {
@@ -52,38 +54,70 @@ export default function Signup() {
     }
     const currentYear = new Date().getFullYear()
     if (
-      parseInt(formData.admissionYear) > currentYear ||
+      parseInt(formData.AdmissionYear) > currentYear ||
       parseInt(formData.graduationYear) > currentYear
     ) {
       setError("Please enter valid years")
       return false
     }
-    if (parseInt(formData.admissionYear) >= parseInt(formData.graduationYear)) {
+    if (parseInt(formData.AdmissionYear) >= parseInt(formData.graduationYear)) {
       setError("Graduation year must be after admission year")
       return false
     }
     return true
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!validateForm()) return
-    setIsLoading(true)
-    setError("")
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  if (!validateForm()) return
+  setIsLoading(true)
+  setError("")
 
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      // For demo purposes, we'll show success
-      setSuccess(true)
-      console.log("Form submitted:", formData)
-    } catch (err) {
-      console.error("Signup error:", err)
-      setError(err instanceof Error ? err.message : "An error occurred during signup")
-    } finally {
-      setIsLoading(false)
+  try {
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      password,
+      AdmissionYear,
+      graduationYear,
+      YearJoined,
+    } = formData
+
+    const payload = {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      password,
+      AdmissionYear,
+      graduationYear,
+      YearJoined,
     }
+
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/signup`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) throw new Error(data.message || "Signup failed")
+
+// Save to localStorage
+localStorage.setItem("authToken", data.result.data.token);
+localStorage.setItem("userData", JSON.stringify(data.result.user));
+setSuccess(true)
+  } catch (err) {
+    setError(err instanceof Error ? err.message : "An unexpected error occurred")
+  } finally {
+    setIsLoading(false)
   }
+}
+
+
 
   const handleGoogleSignup = () => {
     console.log("Google signup clicked")
@@ -263,7 +297,7 @@ export default function Signup() {
                     name="admissionYear"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                     type="number"
-                    value={formData.admissionYear}
+                    value={formData.AdmissionYear}
                     onChange={handleChange}
                     required
                     placeholder="e.g. 1998"
@@ -296,7 +330,7 @@ export default function Signup() {
                   name="yearJoined"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   type="number"
-                  value={formData.yearJoined}
+                  value={formData.YearJoined}
                   onChange={handleChange}
                   required
                   placeholder="e.g. 2024"
@@ -325,15 +359,7 @@ export default function Signup() {
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
                     onClick={() => setShowPassword((v) => !v)}
                   >
-                    {showPassword ? (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-5.523 0-10-4.477-10-10 0-1.657.336-3.234.938-4.675m1.562-2.325A9.956 9.956 0 0112 3c5.523 0 10 4.477 10 10 0 1.657-.336 3.234-.938 4.675m-1.562 2.325A9.956 9.956 0 0112 21c-5.523 0-10-4.477-10-10" />
-                      </svg>
-                    ) : (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm6 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" />
-                      </svg>
-                    )}
+                      {showPassword ? "🙈" : "👁️"}
                   </button>
                 </div>
               </div>
@@ -360,15 +386,7 @@ export default function Signup() {
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
                     onClick={() => setShowConfirmPassword((v) => !v)}
                   >
-                    {showConfirmPassword ? (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-5.523 0-10-4.477-10-10 0-1.657.336-3.234.938-4.675m1.562-2.325A9.956 9.956 0 0112 3c5.523 0 10 4.477 10 10 0 1.657-.336 3.234-.938 4.675m-1.562 2.325A9.956 9.956 0 0112 21c-5.523 0-10-4.477-10-10" />
-                      </svg>
-                    ) : (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm6 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" />
-                      </svg>
-                    )}
+                      {showPassword ?"👁️" :"🙈"  }
                   </button>
                 </div>
               </div>

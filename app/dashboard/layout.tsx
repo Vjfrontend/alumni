@@ -39,35 +39,60 @@ export default function DashboardLayout({
     checkAuth()
   }, [])
 
-  const checkAuth = () => {
-    try {
-      // Check multiple sources for authentication token
-      const token = getAuthToken()
+ const checkAuth = async () => {
+  try {
+    const token = getAuthToken()
 
-      if (!token) {
-        console.log("No authentication token found")
-        redirectToLogin()
-        return
-      }
-
-      // Validate and decode token
-      const memberData = validateToken(token)
-
-      if (memberData) {
-        setMember(memberData)
-      } else {
-        console.log("Invalid token")
-        redirectToLogin()
-        return
-      }
-    } catch (error) {
-      console.error("Authentication error:", error)
+    if (!token) {
+      console.log("No authentication token found")
       redirectToLogin()
       return
     }
 
+    let user: any = null
+    const localUser = localStorage.getItem("userData")
+
+    if (localUser) {
+      user = JSON.parse(localUser)
+    } else {
+      const res = await fetch(`https://alumni-qchs.onrender.com/auth/me?token=${token}`, {
+        headers: { Accept: "*/*" },
+      })
+
+      if (!res.ok) {
+        console.error("Backend response error:", res.status)
+        redirectToLogin()
+        return
+      }
+
+      const data = await res.json()
+      if (!data.user) {
+        console.error("No user data returned")
+        redirectToLogin()
+        return
+      }
+
+      user = data.user
+      localStorage.setItem("userData", JSON.stringify(user))
+    }
+
+    const fullName = `${user.firstName || ""} ${user.lastName || ""}`.trim()
+
+    setMember({
+      email: user.email,
+      name: fullName,
+      membershipId: user._id || "MEMBER-001",
+      status: user.role || "active",
+      firstName: user.firstName,
+      lastName: user.lastName,
+    })
+  } catch (err) {
+    console.error("Profile fetch error:", err)
+    redirectToLogin()
+  } finally {
     setLoading(false)
   }
+}
 
   const getAuthToken = (): string | null => {
     if (typeof window === "undefined") return null
