@@ -44,7 +44,7 @@ export default function Login() {
 
     const apiEndpoint = `${backendUrl}/auth/login`
     const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 30000)
+    const timeoutId = setTimeout(() => controller.abort(), 80000)
 
     try {
       const response = await fetch(apiEndpoint, {
