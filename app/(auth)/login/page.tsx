@@ -154,16 +154,16 @@ localStorage.setItem("userData", JSON.stringify(result.data.user));
             </h1>
             <div className="max-w-[25rem] mx-auto p-6 rounded-lg shadow-2xl bg-gradient-to-b from-green-100 to-green-50/70">
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold text-green-800 mb-2">Login Successful!</h2>
-                <p className="text-green-600 mb-6">
+                <h2 className="text-2xl font-bold text-purple-800 mb-2">Login Successful!</h2>
+                <p className="text-purple-600 mb-6">
                   Welcome back! You have been successfully logged in to the membership portal.
                 </p>
-                <p className="text-sm text-green-600">Redirecting to dashboard...</p>
+                <p className="text-sm text-purple-600">Redirecting to dashboard...</p>
               </div>
             </div>
           </div>
