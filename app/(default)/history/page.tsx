@@ -4,7 +4,7 @@ function HistoryPage() {
   return (
     <div className="bg-gray-100">
       <div className="relative h-[450px] w-full">
-             <Image src="/images/14.jpg" alt="School building" fill className="object-cover brightness-75" priority />
+             <Image src="/images/about1 (2).jpg" alt="School building" fill className="object-cover brightness-75" priority />
              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                <h1 className="text-white text-xl font-bold mb-1">JOGSOBA &apos;98</h1>
                <h2 className="text-purple-400 text-4xl font-bold mb-3">HISTORY</h2>
@@ -53,7 +53,7 @@ function HistoryPage() {
           </div>
           <div className="relative md:w-1/2 h-[300px] w-full">
             <Image
-              src="/images/14.jpg"
+              src="/images/about1 (1).jpg"
               alt="School Building"
               fill
               className="object-cover rounded-md"
@@ -66,7 +66,7 @@ function HistoryPage() {
         <div className="flex flex-col-reverse md:flex-row items-center gap-8">
           <div className="relative md:w-1/2 h-[300px] w-full">
             <Image
-              src="/images/15.jpg"
+              src="/images/about1 (4).jpg"
               alt="AIONIAN Brotherhood"
               fill
               className="object-cover rounded-md"
@@ -114,7 +114,7 @@ function HistoryPage() {
           </div>
           <div className="relative md:w-1/2 h-[300px] w-full">
             <Image
-              src="/images/16.jpg"
+              src="/images/about1 (3).jpg"
               alt="Member Schools"
               fill
               className="object-cover rounded-md"
